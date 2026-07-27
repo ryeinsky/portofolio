@@ -5,20 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio</title>
     <meta name="description" content="Portofolio web sederhana untuk menampilkan biodata, skill, proyek, dan kontak.">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
-    <header class="hero">
+    <header id="home" class="hero">
         <nav class="navbar">
             <a href="#" class="logo">
-                <img src="image/logo.png" alt="Logo Rein">
-            </a>
+                <img src="src/image/logo.png" alt="Logo Rein"></a>
             <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#work">Works</a>
-                <a href="#contact">Contact</a>
+                <a href="home.html" class="nav-link active">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
+                </a>
+                <a href="about.html" class="nav-link">
+                    <i class="fa-solid fa-user"></i>
+                    <span>About</span>
+                </a>
+                <a href="skills.html" class="nav-link">
+                    <i class="fa-solid fa-code"></i>
+                    <span>Skills</span>
+                </a>
+                <a href="work.html" class="nav-link">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <span>Works</span>
+                </a>
+                <a href="contact.html" class="nav-link">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>Contact</span>
+                </a>
             </div>
         </nav>
 
@@ -28,16 +44,26 @@
                 <h1>Reina Sulistyani Arifin</h1>
                 <h2>Informatics Student at UPN Veteran Jawa Timur</h2>
                 <p>I believe every great developer starts by learning the basics. I'm currently studying programming, exploring web development, and challenging myself to build projects that help me grow every day.</p>
-                <div class="hero-actions">
-                    <a href="https://www.linkedin.com/in/reinasulistyaniarifin" class="btn btn-secondary">Let's Connect</a>
+                    <div class="social-icons">
+                        <a href="#">
+                            <i class="fa-solid fa-globe"></i></a>
+                        <a href="https://www.facebook.com/reina.arifin.7" target="_blank">
+                            <i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/reinasulistyani/" target="_blank">
+                            <i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/reinasulistyaniarifin" target="_blank">
+                            <i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://github.com/ryeinsky" target="_blank">
+                            <i class="fa-brands fa-github"></i></a>
+                    </div>
                 </div>
-            </div>
 
             <div class="avatar">
-                <img src="image/rein.png" alt="Foto Profil">
+                <img src="src/image/rein.png" alt="Foto Profil">
             </div>
         </section>
     </header>
+
 
     <main>
         <section id="about" class="section">
@@ -61,7 +87,7 @@
             </div>
             <div class="skill-grid">
                 <article class="skill-card">
-                    <h3>HTML5</h3>
+                    <h3>Test Case Creation </h3>
                     <p>Struktur konten yang rapi dan semantik.</p>
                 </article>
                 <article class="skill-card">
@@ -113,5 +139,8 @@
     <footer>
         <p>© 2026 Nama Anda. Semua hak dilindungi.</p>
     </footer>
+
+    <!-- Script untuk scroll reveal fade-in animation -->
+    <script src="src/js/script.js"></script>
 </body>
 </html>
