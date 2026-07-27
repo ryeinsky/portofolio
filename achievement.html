@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio</title>
+    <meta name="description" content="Portofolio web sederhana untuk menampilkan biodata, skill, proyek, dan kontak.">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <canvas id="stars"></canvas>
+    <header class="hero">
+        <nav class="navbar">
+            <a href="#" class="logo">
+                <img src="src/image/logo.png" alt="Logo Rein"></a>
+            <div class="nav-links">
+                <a href="home.html" class="nav-link">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
+                </a>
+                <a href="about.html" class="nav-link">
+                    <i class="fa-solid fa-user"></i>
+                    <span>About</span>
+                </a>
+                <a href="skills.html" class="nav-link">
+                    <i class="fa-solid fa-code"></i>
+                    <span>Skills</span>
+                </a>
+                <a href="achievement.html" class="nav-link active">
+                    <i class="fa-solid fa-trophy"></i>
+                    <span>Achievements</span>
+                </a>
+                <a href="contact.html" class="nav-link">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>Contact</span>
+                </a>
+            </div>
+        </nav>
+        <section id="achievement" class="section">
+            <div class="section-title">
+                <p>ACHIEVEMENTS</p>
+                <h2>Awards, Experience & Certifications</h2>
+            </div>
+
+            <!-- AWARDS CATEGORY -->
+            <div style="margin-bottom: 4rem;">
+                <h3 style="font-size: 1.4rem; color: white; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.7rem;">
+                    <i class="fa-solid fa-medal" style="color: var(--accent);"></i> Awards
+                </h3>
+                <div class="achievement-grid">
+                    <!-- Award Card 1 -->
+                    <article class="achievement-card" data-preview="src/image/award-placeholder.jpg">
+                        <div class="card-header" style="display: flex; align-items: start; justify-content: space-between;">
+                            <h3>Best Idea - Bootcamp & DemoDay Digital Skills Programme</h3>
+                            <i class="fa-solid fa-image" style="color: var(--accent); opacity: 0.5; font-size: 0.9rem;"></i>
+                        </div>
+                        <p class="card-organizer">Institut Teknologi Sepuluh Nopember x UNICEF</p>
+                        <p class="card-date">February 2024</p>
+                    </article>
+
+                    <!-- Award Card 2 -->
+                    <article class="achievement-card" data-preview="">
+                        <div class="card-header" style="display: flex; align-items: start; justify-content: space-between;">
+                            <h3>Satisfactory Predicate - Digital Skills Programme Graduate</h3>
+                            <i class="fa-solid fa-image" style="color: var(--accent); opacity: 0.5; font-size: 0.9rem;"></i>
+                        </div>
+                        <p class="card-organizer">Institut Teknologi Sepuluh Nopember x UNICEF</p>
+                        <p class="card-date">February 2024</p>
+                    </article>
+
+                    <!-- Award Card 3 -->
+                    <article class="achievement-card" data-preview="">
+                        <div class="card-header" style="display: flex; align-items: start; justify-content: space-between;">
+                            <h3>Bootcamp & Demo Day Participant</h3>
+                            <i class="fa-solid fa-image" style="color: var(--accent); opacity: 0.5; font-size: 0.9rem;"></i>
+                        </div>
+                        <p class="card-organizer">Institut Teknologi Sepuluh Nopember x UNICEF</p>
+                        <p class="card-date">February 2024</p>
+
+                    <!-- Award Card 4 -->
+                    <article class="achievement-card" data-preview="">
+                        <div class="card-header" style="display: flex; align-items: start; justify-content: space-between;">
+                            <h3>Nominee</h3>
+                            <i class="fa-solid fa-image" style="color: var(--accent); opacity: 0.5; font-size: 0.9rem;"></i>
+                        </div>
+                        <p class="card-organizer">National English and Science Olympiad (NESO) 2023</p>
+                        <p class="card-date">March 2023</p>
+                    </article>
+                </div>
+            </div>
+
+            <!-- ORGANIZATION CATEGORY -->
+            <div style="margin-bottom: 4rem;">
+                <h3 style="font-size: 1.4rem; color: white; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.7rem;">
+                    <i class="fa-solid fa-sitemap" style="color: var(--accent);"></i> Organization Experience
+                </h3>
+                <div class="achievement-grid">
+                    <!-- Organization Card 1 -->
+                    <article class="achievement-card" data-preview="">
+                        <div class="card-header" style="display: flex; align-items: start; justify-content: space-between;">
+                            <h3>Quality Assurance Club</h3>
+                            <i class="fa-solid fa-image" style="color: var(--accent); opacity: 0.5; font-size: 0.9rem;"></i>
+                        </div>
+                        <p class="card-organizer">President</p>
+                        <p class="card-date">August 2023 - Present</p>
+                        <p>Leading initiatives to promote quality assurance awareness among students. Organizing workshops on testing methodologies and industry best practices.</p>
+                    </article>
+
+                    <!-- Organization Card 2 -->
+                    <article class="achievement-card" data-preview="src/image/org-placeholder.jpg">
+                        <div class="card-header" style="display: flex; align-items: start; justify-content: space-between;">
+                            <h3>Student Tech Community</h3>
+                            <i class="fa-solid fa-image" style="color: var(--accent); opacity: 0.5; font-size: 0.9rem;"></i>
+                        </div>
+                        <p class="card-organizer">Content Creator & Mentor</p>
+                        <p class="card-date">January 2023 - Present</p>
+                        <p>Creating technical content about software testing and sharing knowledge with junior students. Mentoring peers in QA methodologies and tools.</p>
+                    </article>
+
+                    <!-- Organization Card 3 -->
+                    <article class="achievement-card" data-preview="src/image/org-placeholder.jpg">
+                        <div class="card-header" style="display: flex; align-items: start; justify-content: space-between;">
+                            <h3>University Testing Lab</h3>
+                            <i class="fa-solid fa-image" style="color: var(--accent); opacity: 0.5; font-size: 0.9rem;"></i>
+                        </div>
+                        <p class="card-organizer">Lab Assistant</p>
+                        <p class="card-date">March 2023 - August 2024</p>
+                        <p>Assisting in laboratory sessions focused on practical testing techniques. Helping students understand test planning and execution best practices.</p>
+                    </article>
+                </div>
+            </div>
+
+            <!-- WORK EXPERIENCE CATEGORY -->
+            <div style="margin-bottom: 4rem;">
+                <h3 style="font-size: 1.4rem; color: white; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.7rem;">
+                    <i class="fa-solid fa-briefcase" style="color: var(--accent);"></i> Work Experience
+                </h3>
+                <div class="achievement-grid">
+                    <!-- Work Experience Card 1 -->
+                    <article class="achievement-card" data-preview="src/image/work-placeholder.jpg">
+                        <div class="card-header" style="display: flex; align-items: start; justify-content: space-between;">
+                            <h3>QA Intern</h3>
+                            <i class="fa-solid fa-image" style="color: var(--accent); opacity: 0.5; font-size: 0.9rem;"></i>
+                        </div>
+                        <p class="card-organizer">Tech Company XYZ</p>
+                        <p class="card-date">July 2024 - Present</p>
+                        <p>Performing manual testing on web applications. Creating detailed test cases and bug reports. Participating in regression testing cycles and supporting QA team in ensuring product quality.</p>
+                    </article>
+
+                    <!-- Work Experience Card 2 -->
+                    <article class="achievement-card" data-preview="src/image/work-placeholder.jpg">
+                        <div class="card-header" style="display: flex; align-items: start; justify-content: space-between;">
+                            <h3>Freelance QA Tester</h3>
+                            <i class="fa-solid fa-image" style="color: var(--accent); opacity: 0.5; font-size: 0.9rem;"></i>
+                        </div>
+                        <p class="card-organizer">Various Clients</p>
+                        <p class="card-date">January 2024 - June 2024</p>
+                        <p>Conducted functional and user acceptance testing for multiple web projects. Documented findings and collaborated with development teams on issue resolution.</p>
+                    </article>
+
+                    <!-- Work Experience Card 3 -->
+                    <article class="achievement-card" data-preview="src/image/work-placeholder.jpg">
+                        <div class="card-header" style="display: flex; align-items: start; justify-content: space-between;">
+                            <h3>Testing Volunteer</h3>
+                            <i class="fa-solid fa-image" style="color: var(--accent); opacity: 0.5; font-size: 0.9rem;"></i>
+                        </div>
+                        <p class="card-organizer">Open Source Project</p>
+                        <p class="card-date">September 2023 - December 2023</p>
+                        <p>Contributed to testing efforts for open-source web application. Identified and reported bugs. Helped improve test coverage through exploratory testing.</p>
+                    </article>
+                </div>
+            </div>
+
+            <!-- CERTIFICATIONS CATEGORY -->
+            <div>
+                <h3 style="font-size: 1.4rem; color: white; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.7rem;">
+                    <i class="fa-solid fa-certificate" style="color: var(--accent);"></i> Certifications
+                </h3>
+                <div class="achievement-grid">
+                    <!-- Certification Card 1 -->
+                    <article class="achievement-card" data-preview="src/image/cert-placeholder.jpg">
+                        <div class="card-header" style="display: flex; align-items: start; justify-content: space-between;">
+                            <h3>ISTQB Foundation Level</h3>
+                            <i class="fa-solid fa-image" style="color: var(--accent); opacity: 0.5; font-size: 0.9rem;"></i>
+                        </div>
+                        <p class="card-organizer">International Software Testing Qualifications Board</p>
+                        <p class="card-date">2024</p>
+                        <p>Certification validating foundational knowledge of software testing principles, methodologies, and best practices.</p>
+                    </article>
+
+                    <!-- Certification Card 2 -->
+                    <article class="achievement-card" data-preview="src/image/cert-placeholder.jpg">
+                        <div class="card-header" style="display: flex; align-items: start; justify-content: space-between;">
+                            <h3>SQL for Data Analysis</h3>
+                            <i class="fa-solid fa-image" style="color: var(--accent); opacity: 0.5; font-size: 0.9rem;"></i>
+                        </div>
+                        <p class="card-organizer">Online Learning Platform</p>
+                        <p class="card-date">2024</p>
+                        <p>Certification demonstrating proficiency in SQL queries and database analysis essential for QA roles.</p>
+                    </article>
+
+                    <!-- Certification Card 3 -->
+                    <article class="achievement-card" data-preview="src/image/cert-placeholder.jpg">
+                        <div class="card-header" style="display: flex; align-items: start; justify-content: space-between;">
+                            <h3>Git & GitHub Essentials</h3>
+                            <i class="fa-solid fa-image" style="color: var(--accent); opacity: 0.5; font-size: 0.9rem;"></i>
+                        </div>
+                        <p class="card-organizer">Version Control Academy</p>
+                        <p class="card-date">2023</p>
+                        <p>Certification covering Git fundamentals and GitHub workflows for collaborative development and version management.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </header>
+
+
+    <main>
+    </main>
+
+    <footer>
+        <div class="social-icons">
+                        <a href="#">
+                            <i class="fa-solid fa-globe"></i></a>
+                        <a href="https://www.facebook.com/reina.arifin.7" target="_blank">
+                            <i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/reinasulistyani/" target="_blank">
+                            <i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/reinasulistyaniarifin" target="_blank">
+                            <i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://github.com/ryeinsky" target="_blank">
+                            <i class="fa-brands fa-github"></i></a>
+                    </div>
+
+        <p>© 2026 Reina Sulistyani Arifin. All rights reserved.</p>
+    </footer>
+
+    <!-- Floating Preview Element (untuk interactive hover preview) -->
+    <div id="preview-container" class="preview-container"></div>
+
+    <script src="src/js/script.js"></script>
+    <script src="src/js/particles.js"></script>
+    
+    <!-- Script untuk Achievement Interactive Preview -->
+    <script>
+        // 
+        // ACHIEVEMENT CARD INTERACTIVE PREVIEW
+        // Floating preview saat hover dengan smooth animation
+        // 
+        
+        const previewContainer = document.getElementById('preview-container');
+        const achievementCards = document.querySelectorAll('.achievement-card');
+        
+        // Cek apakah device adalah mobile (touch screen)
+        const isMobile = () => window.innerWidth <= 768 || 'ontouchstart' in window;
+        
+        achievementCards.forEach(card => {
+            const previewSrc = card.getAttribute('data-preview');
+            
+            if (!previewSrc) return;
+            
+            // Desktop: Mouse Events
+            if (!isMobile()) {
+                card.addEventListener('mouseenter', (e) => {
+                    showPreview(previewSrc, e);
+                });
+                
+                card.addEventListener('mousemove', (e) => {
+                    updatePreviewPosition(e);
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    hidePreview();
+                });
+            } 
+            // Mobile: Touch/Click Events
+            else {
+                card.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    showPreview(previewSrc, e);
+                });
+            }
+        });
+        
+        // Fungsi untuk menampilkan preview dengan fade-in animation
+        function showPreview(imageSrc, event) {
+            previewContainer.innerHTML = `
+                <div class="preview-item">
+                    <img src="${imageSrc}" alt="Preview" />
+                </div>
+            `;
+            previewContainer.style.display = 'block';
+            previewContainer.style.opacity = '0';
+            
+            // Trigger reflow untuk memastikan transition bekerja
+            previewContainer.offsetHeight;
+            previewContainer.style.opacity = '1';
+            
+            updatePreviewPosition(event);
+        }
+        
+        // Fungsi untuk mengupdate posisi preview mengikuti kursor (smooth floating effect)
+        function updatePreviewPosition(event) {
+            const offsetX = 20;
+            const offsetY = 20;
+            const x = event.clientX + offsetX;
+            const y = event.clientY + offsetY;
+            
+            previewContainer.style.left = x + 'px';
+            previewContainer.style.top = y + 'px';
+        }
+        
+        // Fungsi untuk menyembunyikan preview dengan fade-out animation
+        function hidePreview() {
+            previewContainer.style.opacity = '0';
+            setTimeout(() => {
+                previewContainer.style.display = 'none';
+            }, 300);
+        }
+        
+        // Close preview saat click di tempat lain
+        document.addEventListener('click', () => {
+            if (isMobile()) {
+                hidePreview();
+            }
+        });
+    </script>
+
+</body>
+</html>

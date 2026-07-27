@@ -58,11 +58,11 @@ links.forEach(link => {
 
 });
 
-/* ========================================
+/*
    SCROLL REVEAL FADE-IN DENGAN INTERSECTION OBSERVER
    Menambahkan efek fade-in halus ketika section masuk viewport
    Menggunakan Intersection Observer untuk performa optimal
-   ======================================== */
+*/
 
 // Opsi untuk Intersection Observer
 // threshold: 0.1 berarti animasi dimulai saat 10% element sudah terlihat
@@ -85,8 +85,82 @@ const observerCallback = (entries) => {
 // Buat Intersection Observer instance
 const observer = new IntersectionObserver(observerCallback, observerOptions);
 
-// Observe semua section untuk scroll reveal animation
+// Observe semua section dan trigger fade-in jika sudah terlihat saat page load
 const allSections = document.querySelectorAll('.section');
 allSections.forEach(section => {
     observer.observe(section);
+    
+    // Cek apakah section sudah terlihat di viewport saat page load
+    const rect = section.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+        // Section sudah terlihat, langsung tambah class scroll-reveal
+        section.classList.add('scroll-reveal');
+    }
 });
+
+// ===========================
+// Typing Effect
+// ===========================
+
+const words = [
+    "Informatics Student at UPN Veteran Jawa Timur",
+    "QA & Software Testing Engineer",
+    "Test Case Designer",
+    "Manual Tester",
+    "Bug Hunter",
+    "Quality-Focused Developer",
+];
+
+let wordIndex = 0;
+let charIndex = 0;
+let deleting = false;
+
+const typing = document.getElementById("typing");
+
+function typeEffect(){
+
+    if(!typing) return;
+
+    const currentWord = words[wordIndex];
+
+    if(!deleting){
+
+        typing.textContent =
+            currentWord.substring(0,charIndex++);
+
+        if(charIndex > currentWord.length){
+
+            deleting = true;
+
+            setTimeout(typeEffect,1500);
+
+            return;
+
+        }
+
+    }else{
+
+        typing.textContent =
+            currentWord.substring(0,charIndex--);
+
+        if(charIndex < 0){
+
+            deleting = false;
+
+            wordIndex++;
+
+            if(wordIndex >= words.length){
+
+                wordIndex = 0;
+
+            }
+
+        }
+
+    }
+
+    setTimeout(typeEffect,deleting ? 50 : 100);
+
+}
+
+typeEffect();

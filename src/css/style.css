@@ -171,13 +171,13 @@ footer {
     margin-bottom: 1.4rem;
 }
 
-.social-icons{
+.hero .social-icons{
     display: flex;
     gap: 18px;
     margin-top: 2rem;
 }
 
-.social-icons a{
+.hero .social-icons a{
     width: 60px;
     height: 60px;
 
@@ -192,7 +192,7 @@ footer {
     transition: all .35s ease;
 }
 
-.social-icons a:hover{
+.hero .social-icons a:hover{
     background: #2f81ff;
     color: white;
     transform: translateY(-6px);
@@ -330,8 +330,9 @@ footer {
 
 .section {
     padding: 4rem 0;
-    /* Opacity 0 sebagai state awal untuk scroll reveal fade-in animation */
+    /* Opacity 0 dan translateY 30px sebagai state awal untuk scroll reveal fade-in animation */
     opacity: 0;
+    transform: translateY(30px);
 }
 
 .section-title {
@@ -406,18 +407,123 @@ footer {
     color: white;
 }
 
-.skill-card p,
-.work-card p {
+.skill-card p {
     color: var(--muted);
     font-size: .95rem;
 }
 
-.work-card a {
-    display: inline-block;
-    margin-top: 1rem;
+
+/* ========================================
+   ACHIEVEMENT CARDS STYLING
+   Styling untuk cards pada achievement page
+   ======================================== */
+
+/* Grid untuk achievement cards (sama seperti skill-grid) */
+.achievement-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+/* Achievement card - mirip dengan skill-card tapi dengan styling tambahan */
+.achievement-card {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    padding: 2rem 1.5rem;
+    text-align: left;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover effect dengan sedikit lift dan border accent */
+.achievement-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent);
+    box-shadow:
+        0 15px 35px rgba(56, 189, 248, 0.15),
+        0 0 20px rgba(56, 189, 248, 0.2);
+}
+
+/* Header styling untuk achievement card */
+.card-header {
+    margin-bottom: 0.8rem;
+}
+
+.achievement-card h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+/* Organization/Company/Publisher name */
+.card-organizer {
     color: var(--accent);
     font-weight: 600;
-    text-decoration: none;
+    font-size: 0.95rem;
+    margin: 0 0 0.3rem 0;
+}
+
+/* Date styling */
+.card-date {
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin: 0 0 0.8rem 0;
+    opacity: 0.8;
+}
+
+/* ========================================
+   FLOATING PREVIEW CONTAINER
+   Styling untuk floating preview yang muncul saat hover
+   ======================================== */
+
+.preview-container {
+    position: fixed;
+    display: none;
+    z-index: 10000;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Preview item - container untuk preview image */
+.preview-item {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    padding: 0.5rem;
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.4),
+        0 0 30px rgba(56, 189, 248, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    max-width: 250px;
+    animation: scaleIn 0.3s ease;
+}
+
+/* Preview image styling */
+.preview-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+/* Scale in animation untuk preview */
+@keyframes scaleIn {
+    from {
+        transform: scale(0.8) translateY(-10px);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
 }
 
 .contact-section {
@@ -587,10 +693,47 @@ footer {
     min-height: 150px;
 }
 
-footer {
+/*footer {
     padding: 1.2rem 0 2rem;
     text-align: center;
     color: var(--muted);
+}*/
+
+footer{
+    padding: 2rem 0;
+    text-align: center;
+    color: var(--muted);
+}
+
+footer .social-icons{
+    display: flex;
+    gap: 18px;
+    margin-top: 2rem;
+    justify-content: center; /* Membuat icon berada di tengah */
+}
+
+footer .social-icons a{
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #2f81ff;
+    border-radius: 50%;
+    color: #2f81ff;
+    text-decoration: none;
+    font-size: 24px;
+    transition: all .35s ease;
+}
+
+footer .social-icons a:hover{
+    background: #2f81ff;
+    color: white;
+    transform: translateY(-6px);
+    box-shadow:
+        0 0 15px rgba(47,129,255,.5),
+        0 0 35px rgba(47,129,255,.3);
 }
 
 @media (max-width: 860px) {
@@ -598,7 +741,8 @@ footer {
     .about-grid,
     .skill-grid,
     .project-grid,
-    .contact-container {
+    .contact-container,
+    .achievement-grid {
         grid-template-columns: 1fr 1fr;
     }
 }
@@ -613,7 +757,8 @@ footer {
     .about-grid,
     .skill-grid,
     .project-grid,
-    .contact-container {
+    .contact-container,
+    .achievement-grid {
         grid-template-columns: 1fr;
     }
 
@@ -662,12 +807,6 @@ body.fade-out{
     transition:.4s ease;
 }
 
-/* ========================================
-   SCROLL REVEAL FADE-IN ANIMATION
-   Animasi fade-in halus untuk sections saat scroll reveal
-   ======================================== */
-
-/* Keyframes untuk fade-in + translateY animation */
 @keyframes scrollRevealFadeIn {
     from {
         opacity: 0;
@@ -679,7 +818,44 @@ body.fade-out{
     }
 }
 
-/* Class yang diterapkan saat element masuk viewport */
 .scroll-reveal {
     animation: scrollRevealFadeIn 0.8s ease-out forwards;
+}
+
+#stars{
+    position:fixed;
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    z-index:-1;
+
+    pointer-events:none;
+}
+
+/* ===========================
+   Typing Effect
+=========================== */
+
+#typing{
+    color: #60a5fa;
+    font-weight: 600;
+}
+
+.cursor{
+    color:#60a5fa;
+    animation:blink .8s infinite;
+}
+
+@keyframes blink{
+
+    0%,50%{
+        opacity:1;
+    }
+
+    51%,100%{
+        opacity:0;
+    }
+
 }

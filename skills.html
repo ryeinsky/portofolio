@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <canvas id="stars"></canvas>
     <header class="hero">
         <nav class="navbar">
             <a href="#" class="logo">
@@ -29,9 +30,9 @@
                     <i class="fa-solid fa-code"></i>
                     <span>Skills</span>
                 </a>
-                <a href="work.html" class="nav-link">
-                    <i class="fa-solid fa-briefcase"></i>
-                    <span>Works</span>
+                <a href="achievement.html" class="nav-link">
+                    <i class="fa-solid fa-trophy"></i>
+                    <span>Achievements</span>
                 </a>
                 <a href="contact.html" class="nav-link">
                     <i class="fa-solid fa-envelope"></i>
@@ -43,25 +44,127 @@
         <section id="skills" class="section">
             <div class="section-title">
                 <p>SKILLS</p>
-                <h2>My Skills</h2>
+                <h2>My Expertise</h2>
             </div>
-            <div class="skill-grid">
-                <article class="skill-card">
-                    <h3>Test Case Creation </h3>
-                    <p>Struktur konten yang rapi dan semantik.</p>
-                </article>
-                <article class="skill-card">
-                    <h3>CSS3</h3>
-                    <p>Desain responsif, animasi, dan layout modern.</p>
-                </article>
-                <article class="skill-card">
-                    <h3>JavaScript</h3>
-                    <p>Interaksi dan pengalaman pengguna yang dinamis.</p>
-                </article>
-                <article class="skill-card">
-                    <h3>UI/UX</h3>
-                    <p>Fokus pada kenyamanan pengguna dan visual yang kuat.</p>
-                </article>
+            
+            <!-- Testing Skills Category -->
+            <div style="margin-bottom: 3rem;">
+                <h3 style="font-size: 1.4rem; color: white; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.7rem;">
+                    <i class="fa-solid fa-flask-vial" style="color: var(--accent);"></i> Quality Assurance & Testing
+                </h3>
+                <p style="color: var(--muted); margin-bottom: 1.5rem; max-width: 800px;">Comprehensive testing expertise focused on ensuring software quality and reliability through systematic validation and defect identification.</p>
+                <div class="skill-grid">
+                    <article class="skill-card">
+                        <h3>Manual Testing</h3>
+                        <p>Thorough functional and user acceptance testing to verify software behavior.</p>
+                    </article>
+                    <article class="skill-card">
+                        <h3>Test Case Design</h3>
+                        <p>Structured approach to designing comprehensive test scenarios and edge cases.</p>
+                    </article>
+                    <article class="skill-card">
+                        <h3>Bug Reporting</h3>
+                        <p>Clear and detailed documentation of defects with reproduction steps.</p>
+                    </article>
+                    <article class="skill-card">
+                        <h3>Functional Testing</h3>
+                        <p>Validating features work as per requirements and specifications.</p>
+                    </article>
+                    <article class="skill-card">
+                        <h3>Regression Testing</h3>
+                        <p>Ensuring new changes don't break existing functionality.</p>
+                    </article>
+                    <article class="skill-card">
+                        <h3>Exploratory Testing</h3>
+                        <p>Flexible testing to discover unexpected defects and improve coverage.</p>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Programming Skills Category -->
+            <div style="margin-bottom: 3rem;">
+                <h3 style="font-size: 1.4rem; color: white; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.7rem;">
+                    <i class="fa-solid fa-code" style="color: var(--accent);"></i> Programming Languages
+                </h3>
+                <p style="color: var(--muted); margin-bottom: 1.5rem; max-width: 800px;">Strong foundation in multiple programming languages with practical experience in web development and systems programming.</p>
+                <div class="skill-grid">
+                    <article class="skill-card">
+                        <h3>C</h3>
+                        <p>System programming and fundamental algorithm implementation.</p>
+                    </article>
+                    <article class="skill-card">
+                        <h3>C++</h3>
+                        <p>Object-oriented programming and advanced data structures.</p>
+                    </article>
+                    <article class="skill-card">
+                        <h3>SQL</h3>
+                        <p>Database querying, design, and data manipulation.</p>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Tools & Technologies Category -->
+            <div style="margin-bottom: 3rem;">
+                <h3 style="font-size: 1.4rem; color: white; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.7rem;">
+                    <i class="fa-solid fa-hammer" style="color: var(--accent);"></i> Tools & Technologies
+                </h3>
+                <p style="color: var(--muted); margin-bottom: 1.5rem; max-width: 800px;">Proficiency with industry-standard tools used in development and quality assurance workflows.</p>
+                <div class="skill-grid">
+                    <article class="skill-card">
+                        <h3>Git</h3>
+                        <p>Version control and collaborative development management.</p>
+                    </article>
+                    <article class="skill-card">
+                        <h3>GitHub</h3>
+                        <p>Repository hosting and team collaboration platform.</p>
+                    </article>
+                    <article class="skill-card">
+                        <h3>VS Code</h3>
+                        <p>Modern code editor with extensive development capabilities.</p>
+                    </article>
+                    <article class="skill-card">
+                        <h3>Figma</h3>
+                        <p>UI/UX design and prototyping collaboration platform.</p>
+                    </article>
+                    <article class="skill-card">
+                        <h3>ClickUp</h3>
+                        <p>Project management & task management</p>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Soft Skills Category -->
+            <div>
+                <h3 style="font-size: 1.4rem; color: white; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.7rem;">
+                    <i class="fa-solid fa-heart" style="color: var(--accent);"></i> Soft Skills
+                </h3>
+                <p style="color: var(--muted); margin-bottom: 1.5rem; max-width: 800px;">Essential interpersonal and professional abilities that drive success in collaborative environments.</p>
+                <div class="skill-grid">
+                    <article class="skill-card">
+                        <h3>Problem Solving</h3>
+                        <p>Analytical approach to finding creative and practical solutions.</p>
+                    </article>
+                    <article class="skill-card">
+                        <h3>Communication</h3>
+                        <p>Clear articulation of ideas and technical concepts to stakeholders.</p>
+                    </article>
+                    <article class="skill-card">
+                        <h3>Teamwork</h3>
+                        <p>Effective collaboration and synergy with cross-functional teams.</p>
+                    </article>
+                    <article class="skill-card">
+                        <h3>Time Management</h3>
+                        <p>Prioritization and efficient task completion under deadlines.</p>
+                    </article>
+                    <article class="skill-card">
+                        <h3>Fast Learner</h3>
+                        <p>Quick adaptation to new technologies and methodologies.</p>
+                    </article>
+                    <article class="skill-card">
+                        <h3>Critical Thinking</h3>
+                        <p>Logical analysis and evaluation of complex scenarios.</p>
+                    </article>
+                </div>
             </div>
         </section>
     </header>
@@ -71,10 +174,23 @@
     </main>
 
     <footer>
-        <p>© 2026 Nama Anda. Semua hak dilindungi.</p>
+        <div class="social-icons">
+                        <a href="#">
+                            <i class="fa-solid fa-globe"></i></a>
+                        <a href="https://www.facebook.com/reina.arifin.7" target="_blank">
+                            <i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/reinasulistyani/" target="_blank">
+                            <i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/reinasulistyaniarifin" target="_blank">
+                            <i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://github.com/ryeinsky" target="_blank">
+                            <i class="fa-brands fa-github"></i></a>
+                    </div>
+
+        <p>© 2026 Reina Sulistyani Arifin. All rights reserved</p>
     </footer>
 
     <script src="src/js/script.js"></script>
-
+    <script src="src/js/particles.js"></script>
 </body>
 </html>
