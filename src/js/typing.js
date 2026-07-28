@@ -1,56 +1,64 @@
 const typing = document.getElementById("typing");
 
-if (typing) {
+let words = [];
 
-    const words = [
-        "Informatics Student at UPN Veteran Jawa Timur",
-        "QA & Software Testing Engineer",
-        "Test Case Designer",
-        "Manual Tester",
-        "Bug Hunter",
-        "Quality-Focused Developer"
-    ];
+let wordIndex = 0;
+let charIndex = 0;
+let deleting = false;
 
-    let wordIndex = 0;
-    let charIndex = 0;
-    let deleting = false;
+let typingTimeout = null;
 
-    function typeEffect(){
+function typeEffect(){
 
-        const currentWord = words[wordIndex];
+    if(!typing) return;
 
-        if(!deleting){
+    const currentWord = words[wordIndex];
 
-            typing.textContent =
-                currentWord.substring(0, charIndex++);
+    if(!deleting){
 
-            if(charIndex > currentWord.length){
+        typing.textContent =
+            currentWord.substring(0,charIndex++);
 
-                deleting = true;
+        if(charIndex > currentWord.length){
 
-                setTimeout(typeEffect, 1500);
+            deleting = true;
 
-                return;
+            typingTimeout =
+                setTimeout(typeEffect,1500);
 
-            }
+            return;
+        }
 
-        }else{
+    }else{
 
-            typing.textContent =
-                currentWord.substring(0, charIndex--);
+        typing.textContent =
+            currentWord.substring(0,charIndex--);
 
-            if(charIndex < 0){
+        if(charIndex < 0){
 
-                deleting = false;
-                wordIndex = (wordIndex + 1) % words.length;
+            deleting = false;
 
-            }
+            wordIndex =
+                (wordIndex+1)%words.length;
 
         }
 
-        setTimeout(typeEffect, deleting ? 50 : 100);
-
     }
+
+    typingTimeout =
+        setTimeout(typeEffect,deleting?50:100);
+
+}
+
+function setTypingWords(newWords){
+
+    clearTimeout(typingTimeout);
+
+    words = [...newWords];
+
+    wordIndex = 0;
+    charIndex = 0;
+    deleting = false;
 
     typeEffect();
 

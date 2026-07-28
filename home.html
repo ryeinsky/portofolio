@@ -6,11 +6,23 @@
     <title>Portofolio</title>
     <meta name="description" content="Portofolio web sederhana untuk menampilkan biodata, skill, proyek, dan kontak.">
     <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/lang.css">
+    <link rel="stylesheet" href="src/css/typing.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
     <canvas id="stars"></canvas>
+    <div class="language-switch">
+        <span>🇮🇩</span>
+
+        <label class="switch">
+            <input type="checkbox" id="langToggle">
+            <span class="slider"></span>
+        </label>
+
+        <span>🇬🇧</span>
+    </div>
     <header id="home" class="hero">
         <nav class="navbar">
             <a href="#" class="logo">
@@ -84,5 +96,6 @@
     <script src="src/js/reveal.js"></script>
     <script src="src/js/typing.js"></script>
     <script src="src/js/particles.js"></script>
+    <script src="src/js/lang.js"></script>
 </body>
 </html>

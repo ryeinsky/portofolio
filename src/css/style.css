@@ -693,11 +693,6 @@ footer {
     min-height: 150px;
 }
 
-/*footer {
-    padding: 1.2rem 0 2rem;
-    text-align: center;
-    color: var(--muted);
-}*/
 
 footer{
     padding: 2rem 0;
@@ -832,30 +827,4 @@ body.fade-out{
     z-index:-1;
 
     pointer-events:none;
-}
-
-/* ===========================
-   Typing Effect
-=========================== */
-
-#typing{
-    color: #60a5fa;
-    font-weight: 600;
-}
-
-.cursor{
-    color:#60a5fa;
-    animation:blink .8s infinite;
-}
-
-@keyframes blink{
-
-    0%,50%{
-        opacity:1;
-    }
-
-    51%,100%{
-        opacity:0;
-    }
-
 }

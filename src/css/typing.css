@@ -1,0 +1,21 @@
+#typing{
+    color: #60a5fa;
+    font-weight: 600;
+}
+
+.cursor{
+    color:#60a5fa;
+    animation:blink .8s infinite;
+}
+
+@keyframes blink{
+
+    0%,50%{
+        opacity:1;
+    }
+
+    51%,100%{
+        opacity:0;
+    }
+
+}
