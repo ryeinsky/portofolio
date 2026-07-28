@@ -27,13 +27,16 @@ const translations = {
         ],
 
         heroDesc:
-            "Mahasiswa Informatika yang memiliki ketertarikan pada Quality Assurance dan Software Testing. Saya senang menganalisis aplikasi, menemukan bug, serta memastikan kualitas perangkat lunak melalui pengujian yang teliti.",
+            "Mahasiswa Informatika yang memiliki minat pada Quality Assurance dan Software Testing. Saya senang belajar, memecahkan masalah, serta membangun perangkat lunak yang berkualitas.",
 
         btnAchievement:
             "Lihat Pencapaian",
 
         btnContact:
-            "Hubungi Saya"
+            "Hubungi Saya",
+
+        btnOutline:
+            "Pelajari lebih lanjut"
 
     },
 
@@ -54,13 +57,16 @@ const translations = {
         ],
 
         heroDesc:
-            "Informatics Student | QA & Software Testing Enthusiast. Passionate about quality assurance, problem-solving, and continuous learning. I believe in building reliable software through meticulous testing and analytical thinking.",
+            "Informatics student with a strong interest in Quality Assurance and Software Testing. I enjoy learning, solving problems, and building reliable digital solutions.",
 
         btnAchievement:
             "View My Achievements",
 
         btnContact:
-            "Contact Me"
+            "Contact Me",
+
+        btnOutline:
+            "Learn More"
 
     }
 
