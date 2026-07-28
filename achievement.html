@@ -51,7 +51,7 @@
                 </h3>
                 <div class="achievement-grid">
                     <!-- Award Card 1 -->
-                    <article class="achievement-card" data-preview="src/image/award-placeholder.jpg">
+                    <article class="achievement-card" data-preview="src/image/BestIdea.png">
                         <div class="card-header" style="display: flex; align-items: start; justify-content: space-between;">
                             <h3>Best Idea - Bootcamp & DemoDay Digital Skills Programme</h3>
                             <i class="fa-solid fa-image" style="color: var(--accent); opacity: 0.5; font-size: 0.9rem;"></i>
@@ -71,7 +71,7 @@
                     </article>
 
                     <!-- Award Card 3 -->
-                    <article class="achievement-card" data-preview="">
+                    <article class="achievement-card" data-preview="src/image/Participant.png">
                         <div class="card-header" style="display: flex; align-items: start; justify-content: space-between;">
                             <h3>Bootcamp & Demo Day Participant</h3>
                             <i class="fa-solid fa-image" style="color: var(--accent); opacity: 0.5; font-size: 0.9rem;"></i>
@@ -101,34 +101,61 @@
                     <!-- Organization Card 1 -->
                     <article class="achievement-card" data-preview="">
                         <div class="card-header" style="display: flex; align-items: start; justify-content: space-between;">
-                            <h3>Quality Assurance Club</h3>
+                            <h3>Organisasi Siswa Intra Sekolah</h3>
                             <i class="fa-solid fa-image" style="color: var(--accent); opacity: 0.5; font-size: 0.9rem;"></i>
                         </div>
-                        <p class="card-organizer">President</p>
-                        <p class="card-date">August 2023 - Present</p>
-                        <p>Leading initiatives to promote quality assurance awareness among students. Organizing workshops on testing methodologies and industry best practices.</p>
+                        <p class="card-organizer">Anggota Divisi Kewirausahaan</p>
+                        <p class="card-date">2019-2020</p>
                     </article>
 
                     <!-- Organization Card 2 -->
                     <article class="achievement-card" data-preview="src/image/org-placeholder.jpg">
                         <div class="card-header" style="display: flex; align-items: start; justify-content: space-between;">
-                            <h3>Student Tech Community</h3>
+                            <h3>Organisasi Siswa Intra Sekolah</h3>
                             <i class="fa-solid fa-image" style="color: var(--accent); opacity: 0.5; font-size: 0.9rem;"></i>
                         </div>
-                        <p class="card-organizer">Content Creator & Mentor</p>
-                        <p class="card-date">January 2023 - Present</p>
-                        <p>Creating technical content about software testing and sharing knowledge with junior students. Mentoring peers in QA methodologies and tools.</p>
+                        <p class="card-organizer">Ketua 1</p>
+                        <p class="card-date">2020-2021</p>
                     </article>
 
                     <!-- Organization Card 3 -->
                     <article class="achievement-card" data-preview="src/image/org-placeholder.jpg">
                         <div class="card-header" style="display: flex; align-items: start; justify-content: space-between;">
-                            <h3>University Testing Lab</h3>
+                            <h3>Organisasi Siswa Intra Sekolah</h3>
                             <i class="fa-solid fa-image" style="color: var(--accent); opacity: 0.5; font-size: 0.9rem;"></i>
                         </div>
-                        <p class="card-organizer">Lab Assistant</p>
-                        <p class="card-date">March 2023 - August 2024</p>
-                        <p>Assisting in laboratory sessions focused on practical testing techniques. Helping students understand test planning and execution best practices.</p>
+                        <p class="card-organizer">Wakil Ketua 2</p>
+                        <p class="card-date">2022-2023</p>
+                    </article>
+
+                    <!-- Organization Card 4 -->
+                    <article class="achievement-card" data-preview="src/image/org-placeholder.jpg">
+                        <div class="card-header" style="display: flex; align-items: start; justify-content: space-between;">
+                            <h3>Organisasi Siswa Intra Sekolah</h3>
+                            <i class="fa-solid fa-image" style="color: var(--accent); opacity: 0.5; font-size: 0.9rem;"></i>
+                        </div>
+                        <p class="card-organizer">Sekretaris</p>
+                        <p class="card-date">2023-2024</p>
+                    </article>
+
+                    <!-- Organization Card 5 -->
+                    <article class="achievement-card" data-preview="src/image/org-placeholder.jpg">
+                        <div class="card-header" style="display: flex; align-items: start; justify-content: space-between;">
+                            <h3>Pasuruan Campus Expo</h3>
+                            <i class="fa-solid fa-image" style="color: var(--accent); opacity: 0.5; font-size: 0.9rem;"></i>
+                        </div>
+                        <p class="card-organizer">Delegasi</p>
+                        <p class="card-date">2026</p>
+                    </article>
+
+                    <!-- Organization Card 6 -->
+                    <article class="achievement-card" data-preview="src/image/org-placeholder.jpg">
+                        <div class="card-header" style="display: flex; align-items: start; justify-content: space-between;">
+                            <h3>Pemilihan Raya FASILKOM 2026</h3>
+                            <i class="fa-solid fa-image" style="color: var(--accent); opacity: 0.5; font-size: 0.9rem;"></i>
+                        </div>
+                        <p class="card-organizer">Staff Divisi Humas</p>
+                        <p class="card-date">2026</p>
                     </article>
                 </div>
             </div>
@@ -241,93 +268,11 @@
     <!-- Floating Preview Element (untuk interactive hover preview) -->
     <div id="preview-container" class="preview-container"></div>
 
-    <script src="src/js/script.js"></script>
+    <script src="src/js/transition.js"></script>
+    <script src="src/js/reveal.js"></script>
+    <script src="src/js/typing.js"></script>
     <script src="src/js/particles.js"></script>
-    
-    <!-- Script untuk Achievement Interactive Preview -->
-    <script>
-        // 
-        // ACHIEVEMENT CARD INTERACTIVE PREVIEW
-        // Floating preview saat hover dengan smooth animation
-        // 
-        
-        const previewContainer = document.getElementById('preview-container');
-        const achievementCards = document.querySelectorAll('.achievement-card');
-        
-        // Cek apakah device adalah mobile (touch screen)
-        const isMobile = () => window.innerWidth <= 768 || 'ontouchstart' in window;
-        
-        achievementCards.forEach(card => {
-            const previewSrc = card.getAttribute('data-preview');
-            
-            if (!previewSrc) return;
-            
-            // Desktop: Mouse Events
-            if (!isMobile()) {
-                card.addEventListener('mouseenter', (e) => {
-                    showPreview(previewSrc, e);
-                });
-                
-                card.addEventListener('mousemove', (e) => {
-                    updatePreviewPosition(e);
-                });
-                
-                card.addEventListener('mouseleave', () => {
-                    hidePreview();
-                });
-            } 
-            // Mobile: Touch/Click Events
-            else {
-                card.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    showPreview(previewSrc, e);
-                });
-            }
-        });
-        
-        // Fungsi untuk menampilkan preview dengan fade-in animation
-        function showPreview(imageSrc, event) {
-            previewContainer.innerHTML = `
-                <div class="preview-item">
-                    <img src="${imageSrc}" alt="Preview" />
-                </div>
-            `;
-            previewContainer.style.display = 'block';
-            previewContainer.style.opacity = '0';
-            
-            // Trigger reflow untuk memastikan transition bekerja
-            previewContainer.offsetHeight;
-            previewContainer.style.opacity = '1';
-            
-            updatePreviewPosition(event);
-        }
-        
-        // Fungsi untuk mengupdate posisi preview mengikuti kursor (smooth floating effect)
-        function updatePreviewPosition(event) {
-            const offsetX = 20;
-            const offsetY = 20;
-            const x = event.clientX + offsetX;
-            const y = event.clientY + offsetY;
-            
-            previewContainer.style.left = x + 'px';
-            previewContainer.style.top = y + 'px';
-        }
-        
-        // Fungsi untuk menyembunyikan preview dengan fade-out animation
-        function hidePreview() {
-            previewContainer.style.opacity = '0';
-            setTimeout(() => {
-                previewContainer.style.display = 'none';
-            }, 300);
-        }
-        
-        // Close preview saat click di tempat lain
-        document.addEventListener('click', () => {
-            if (isMobile()) {
-                hidePreview();
-            }
-        });
-    </script>
+    <script src="src/js/achievementcard.js"></script>
 
 </body>
 </html>
