@@ -828,3 +828,23 @@ body.fade-out{
 
     pointer-events:none;
 }
+
+#scroll-progress{
+    position:fixed;
+    top:0;
+    left:0;
+    width:0%;
+    height:4px;
+
+    background:linear-gradient(
+        90deg,
+        #60a5fa,
+        #2563eb
+    );
+
+    z-index:9999;
+
+    box-shadow:
+        0 0 12px rgba(37,99,235,.7),
+        0 0 25px rgba(96,165,250,.5);
+}
