@@ -1,64 +1,48 @@
 const typing = document.getElementById("typing");
 
-let words = [];
+if (typing) {
 
-let wordIndex = 0;
-let charIndex = 0;
-let deleting = false;
+    const words = [
+        "Informatics Student at UPN Veteran Jawa Timur",
+        "QA & Software Testing Enthusiast",
+        "Test Case Designer",
+        "Manual Software Tester",
+        "Bug Hunter",
+        "Quality-Focused Developer"
+    ];
 
-let typingTimeout = null;
+    let wordIndex = 0;
+    let charIndex = 0;
+    let deleting = false;
 
-function typeEffect(){
+    function typeEffect() {
 
-    if(!typing) return;
+        const currentWord = words[wordIndex];
 
-    const currentWord = words[wordIndex];
+        if (!deleting) {
 
-    if(!deleting){
+            typing.textContent = currentWord.substring(0, charIndex++);
 
-        typing.textContent =
-            currentWord.substring(0,charIndex++);
+            if (charIndex > currentWord.length) {
+                deleting = true;
+                setTimeout(typeEffect, 1500);
+                return;
+            }
 
-        if(charIndex > currentWord.length){
+        } else {
 
-            deleting = true;
+            typing.textContent = currentWord.substring(0, charIndex--);
 
-            typingTimeout =
-                setTimeout(typeEffect,1500);
-
-            return;
-        }
-
-    }else{
-
-        typing.textContent =
-            currentWord.substring(0,charIndex--);
-
-        if(charIndex < 0){
-
-            deleting = false;
-
-            wordIndex =
-                (wordIndex+1)%words.length;
+            if (charIndex < 0) {
+                deleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+            }
 
         }
+
+        setTimeout(typeEffect, deleting ? 50 : 100);
 
     }
-
-    typingTimeout =
-        setTimeout(typeEffect,deleting?50:100);
-
-}
-
-function setTypingWords(newWords){
-
-    clearTimeout(typingTimeout);
-
-    words = [...newWords];
-
-    wordIndex = 0;
-    charIndex = 0;
-    deleting = false;
 
     typeEffect();
 
