@@ -6,10 +6,13 @@
     <title>Kontak - Portofolio</title>
     <meta name="description" content="Hubungi saya untuk proyek atau pertanyaan seputar web development.">
     <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/cursor.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
     <div id="scroll-progress"></div>
     <canvas id="stars"></canvas>
     <header class="hero">
@@ -40,55 +43,57 @@
         <section id="contact" class="section contact-section">
             <div class="section-title">
                 <p>CONTACT</p>
-                <h2>Mari Bekerja Sama</h2>
+                <h2>Let's Connect</h2>
             </div>
-            <p class="contact-intro">I'm interested in opportunities in Software Quality Assurance, testing positions, or collaborations on projects that value quality and reliability. Feel free to reach out if you'd like to discuss testing strategies, QA best practices, or any potential collaboration.</p>
-
+            <p class="contact-intro">
+                I'm open to internship opportunities, entry-level positions, and collaborations in Software Quality Assurance, Software Testing, and Web Development. If you'd like to discuss a project or simply connect, feel free to reach out.
+            </p>
             <div class="contact-container">
-                <!-- Contact Info -->
+                <!-- Contact Information -->
                 <div class="contact-info">
-                    <h3>Hubungi Saya</h3>
-                    
+                    <h3>Get in Touch</h3>
                     <div class="info-item">
                         <i class="fa-solid fa-envelope"></i>
                         <div>
                             <p class="info-label">Email</p>
-                            <a href="mailto:sulistyanireina@gmail.com">sulistyanireina@gmail.com</a>
+                            <a href="mailto:sulistyanireina@gmail.com">
+                                sulistyanireina@gmail.com
+                            </a>
                         </div>
                     </div>
-
                     <div class="info-item">
                         <i class="fa-solid fa-map-pin"></i>
                         <div>
-                            <p class="info-label">Lokasi</p>
+                            <p class="info-label">Location</p>
                             <p>Indonesia</p>
                         </div>
                     </div>
-
                     <div class="info-item">
                         <i class="fa-solid fa-phone"></i>
                         <div>
-                            <p class="info-label">Telepon</p>
-                            <a href="tel:+628123456789">+62 812 3456 789</a>
+                            <p class="info-label">Phone</p>
+                            <a href="tel:+6283857818583">
+                                +62 838-5781-8583
+                            </a>
                         </div>
                     </div>
-
-                    <!-- Social Links -->
-                    <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Follow Saya</h3>
+                    <h3 style="margin-top:2rem; margin-bottom:1rem;">
+                        Find Me Online
+                    </h3>
                     <div class="social-links">
-                        <a href="https://www.facebook.com/reina.arifin.7" target="_blank" title="Facebook">
+                        <a href="https://www.facebook.com/reina.arifin.7" target="_blank">
                             <i class="fa-brands fa-facebook-f"></i>
                             <span>Facebook</span>
                         </a>
-                        <a href="https://www.instagram.com/reinasulistyani/" target="_blank" title="Instagram">
+                        <a href="https://www.instagram.com/reinasulistyani/" target="_blank">
                             <i class="fa-brands fa-instagram"></i>
                             <span>Instagram</span>
                         </a>
-                        <a href="https://www.linkedin.com/in/reinasulistyaniarifin" target="_blank" title="LinkedIn">
+                        <a href="https://www.linkedin.com/in/reinasulistyaniarifin" target="_blank">
                             <i class="fa-brands fa-linkedin-in"></i>
                             <span>LinkedIn</span>
                         </a>
-                        <a href="https://github.com/ryeinsky" target="_blank" title="GitHub">
+                        <a href="https://github.com/ryeinsky" target="_blank">
                             <i class="fa-brands fa-github"></i>
                             <span>GitHub</span>
                         </a>
@@ -96,32 +101,53 @@
                 </div>
 
                 <!-- Contact Form -->
-                <form class="contact-form" action="mailto:sulistyanireina@gmail.com" method="POST" enctype="text/plain">
+                <form
+                    class="contact-form"
+                    action="mailto:sulistyanireina@gmail.com"
+                    method="POST"
+                    enctype="text/plain">
                     <div class="form-group">
-                        <label for="name">Nama</label>
-                        <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+                        <label for="name">Full Name</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your full name"
+                            required>
                     </div>
-
                     <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
+                        <label for="email">Email Address</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email address"
+                            required>
                     </div>
-
                     <div class="form-group">
-                        <label for="subject">Subjek</label>
-                        <input type="text" id="subject" name="subject" placeholder="Topik pesan Anda" required>
+                        <label for="subject">Subject</label>
+                        <input
+                            type="text"
+                            id="subject"
+                            name="subject"
+                            placeholder="What would you like to discuss?"
+                            required>
                     </div>
-
                     <div class="form-group">
-                        <label for="message">Pesan</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Tuliskan pesan Anda di sini..." required></textarea>
+                        <label for="message">Message</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="5"
+                            placeholder="Write your message here..."
+                            required></textarea>
                     </div>
-
-                    <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+                    <button type="submit" class="btn btn-primary">
+                        Send Message
+                    </button>
                 </form>
             </div>
         </section>
-    </header>
 
     <main>
     </main>
@@ -136,6 +162,6 @@
     <script src="src/js/typing.js"></script>
     <script src="src/js/particles.js"></script>
     <script src="src/js/scroll.js"></script>
-
+    <script src="src/js/cursor.js"></script>
 </body>
 </html>

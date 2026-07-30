@@ -6,12 +6,14 @@
     <title>Portofolio</title>
     <meta name="description" content="Portofolio web sederhana untuk menampilkan biodata, skill, proyek, dan kontak.">
     <link rel="stylesheet" href="src/css/style.css">
-    <link rel="stylesheet" href="src/css/lang.css">
     <link rel="stylesheet" href="src/css/typing.css">
+    <link rel="stylesheet" href="src/css/cursor.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
     <div id="scroll-progress"></div>
     <canvas id="stars"></canvas>
     <header id="home" class="hero">
@@ -77,158 +79,101 @@
 
 
     <main>
-        <section id="skills" class="section">
+        <section class="home-skills section">
             <div class="section-title">
-                <p>SKILLS</p>
-                <h2>My Expertise</h2>
+                <p>MY SKILLS</p>
+                <h2>What I Do</h2>
             </div>
-            
-            <!-- Testing Skills Category -->
-            <div style="margin-bottom: 3rem;">
-                <div class="skill-grid">
-                    <article class="skill-card">
-                        <h3>Manual Testing</h3>
-                        <p>Thorough functional and user acceptance testing to verify software behavior.</p>
-                    </article>
-                    <article class="skill-card">
-                        <h3>Functional Testing</h3>
-                        <p>Validating features work as per requirements and specifications.</p>
-                    </article>
-                    <article class="skill-card">
-                        <h3>Problem Solving</h3>
-                        <p>Analytical approach to finding creative and practical solutions.</p>
-                    </article>
-                    <article class="skill-card">
-                        <h3>Communication</h3>
-                        <p>Clear articulation of ideas and technical concepts to stakeholders.</p>
-                    </article>
-                    <div class="cta-buttons" style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
-                    <a href="about.html" class="btn btn-outline" style="text-decoration: none;">
-                    Learn More
+            <div class="skill-grid">
+                <article class="skill-card">
+                    <i class="fa-solid fa-vial"></i>
+                    <h3>Software Testing</h3>
+                    <p>
+                        Perform manual testing to ensure software quality, functionality,
+                        and reliability.
+                    </p>
+                </article>
+                <article class="skill-card">
+                    <i class="fa-solid fa-list-check"></i>
+                    <h3>Test Case Design</h3>
+                    <p>
+                        Create structured and comprehensive test cases based on
+                        requirements and user scenarios.
+                    </p>
+                </article>
+                <article class="skill-card">
+                    <i class="fa-solid fa-code"></i>
+                    <h3>Web Development</h3>
+                    <p>
+                        Build responsive websites using HTML, CSS, and JavaScript while
+                        continuously improving development skills.
+                    </p>
+                </article>
+                <article class="skill-card">
+                    <i class="fa-solid fa-bug"></i>
+                    <h3>Bug Reporting</h3>
+                    <p>
+                        Identify issues, reproduce bugs, and provide clear reports to
+                        support the development process.
+                    </p>
+                </article>
+            </div>
+            <div class="section-button">
+                <a href="about.html" class="btn btn-outline">
+                    View All Skills
                     <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                    </div>
-                </div>
+                </a>
             </div>
         </section>
 
-        <section id="achievement" class="section">
+        <section class="home-achievements section">
             <div class="section-title">
                 <p>ACHIEVEMENTS</p>
-                <h2>Awards, Experience & Certifications</h2>
+                <h2>Highlights</h2>
+            </div>
+            <div class="achievement-grid">
+                <article class="achievement-card">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <span class="achievement-year">
+                        2025
+                    </span>
+                    <h3>QA Internship</h3>
+                    <p>
+                        Completed an internship as a Quality Assurance Intern,
+                        gaining experience in software testing, test case creation,
+                        bug reporting, and application validation.
+                    </p>
+                </article>
+                <article class="achievement-card">
+                    <i class="fa-solid fa-certificate"></i>
+                    <span class="achievement-year">
+                        2025
+                    </span>
+                    <h3>Professional Certificates</h3>
+                    <p>
+                        Earned several certificates in technology,
+                        software testing, and web development through
+                        online learning platforms.
+                    </p>
+                </article>
+                <article class="achievement-card">
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <span class="achievement-year">
+                        2026
+                    </span>
+                    <h3>Portfolio Projects</h3>
+                    <p>
+                        Built personal projects to improve programming,
+                        front-end development, and quality assurance skills.
+                    </p>
+                </article>
             </div>
 
-            <!-- AWARDS CATEGORY -->
-            <div style="margin-bottom: 4rem;">
-                <h3 style="font-size: 1.4rem; color: white; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.7rem;">
-                    <i class="fa-solid fa-medal" style="color: var(--accent);"></i> Awards
-                </h3>
-                <div class="achievement-grid">
-                    <!-- Award Card 1 -->
-                    <article class="achievement-card" data-preview="">
-                        <div class="card-header" style="display: flex; align-items: start; justify-content: space-between;">
-                            <h3>Best Idea - Bootcamp & DemoDay Digital Skills Programme</h3>
-                            <i class="fa-solid fa-image" style="color: var(--accent); opacity: 0.5; font-size: 0.9rem;"></i>
-                        </div>
-                        <p class="card-organizer">Institut Teknologi Sepuluh Nopember x UNICEF</p>
-                        <p class="card-date">February 2024</p>
-                    </article>
-
-                    <!-- Award Card 4 -->
-                    <article class="achievement-card" data-preview="">
-                        <div class="card-header" style="display: flex; align-items: start; justify-content: space-between;">
-                            <h3>Nominee</h3>
-                            <i class="fa-solid fa-image" style="color: var(--accent); opacity: 0.5; font-size: 0.9rem;"></i>
-                        </div>
-                        <p class="card-organizer">National English and Science Olympiad (NESO) 2023</p>
-                        <p class="card-date">March 2023</p>
-                    </article>
-
-                    <!-- Award Card 6 -->
-                    <article class="achievement-card" data-preview="">
-                        <div class="card-header" style="display: flex; align-items: start; justify-content: space-between;">
-                            <h3>Participant Mathematics Competition Detik MSC 28</h3>
-                            <i class="fa-solid fa-image" style="color: var(--accent); opacity: 0.5; font-size: 0.9rem;"></i>
-                        </div>
-                        <p class="card-organizer">MSC FKIP Universitas Jember</p>
-                        <p class="card-date">September 2024</p>
-                    </article>
-                    <div class="cta-buttons" style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
-                    <a href="achievement.html" class="btn btn-outline" style="text-decoration: none;">
-                    Learn More
+            <div class="section-button">
+                <a href="achievement.html" class="btn btn-outline">
+                    View All Achievements
                     <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ORGANIZATION CATEGORY -->
-            <div style="margin-bottom: 4rem;">
-                <h3 style="font-size: 1.4rem; color: white; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.7rem;">
-                    <i class="fa-solid fa-sitemap" style="color: var(--accent);"></i> Organization Experience
-                </h3>
-                <div class="achievement-grid">
-                    <!-- Organization Card 2 -->
-                    <article class="achievement-card" data-preview="src/image/org-placeholder.jpg">
-                        <div class="card-header" style="display: flex; align-items: start; justify-content: space-between;">
-                            <h3>Ketua 1</h3>
-                            <i class="fa-solid fa-image" style="color: var(--accent); opacity: 0.5; font-size: 0.9rem;"></i>
-                        </div>
-                        <p class="card-organizer">OSIS SMPN 1 Jabon</p>
-                        <p class="card-date">2020-2021</p>
-                    </article>
-
-                    <!-- Organization Card 4 -->
-                    <article class="achievement-card" data-preview="src/image/org-placeholder.jpg">
-                        <div class="card-header" style="display: flex; align-items: start; justify-content: space-between;">
-                            <h3>Sekretaris Umum</h3>
-                            <i class="fa-solid fa-image" style="color: var(--accent); opacity: 0.5; font-size: 0.9rem;"></i>
-                        </div>
-                        <p class="card-organizer">OSIS SMAN 1 Gondangwetan</p>
-                        <p class="card-date">2023-2024</p>
-                    </article>
-
-                    <!-- Organization Card 6 -->
-                    <article class="achievement-card" data-preview="src/image/PEMIRA.jpg">
-                        <div class="card-header" style="display: flex; align-items: start; justify-content: space-between;">
-                            <h3>Staff Divisi Humas</h3>
-                            <i class="fa-solid fa-image" style="color: var(--accent); opacity: 0.5; font-size: 0.9rem;"></i>
-                        </div>
-                        <p class="card-organizer">Pemilihan Raya FASILKOM 2026</p>
-                        <p class="card-date">2026</p>
-                    </article>
-                    <div class="cta-buttons" style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
-                    <a href="achievement.html" class="btn btn-outline" style="text-decoration: none;">
-                    Learn More
-                    <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- CERTIFICATIONS CATEGORY -->
-            <div>
-                <h3 style="font-size: 1.4rem; color: white; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.7rem;">
-                    <i class="fa-solid fa-certificate" style="color: var(--accent);"></i> Certifications
-                </h3>
-                <div class="achievement-grid">
-                    <!-- Certification Card 2 -->
-                    <article class="achievement-card" data-preview="src/image/UKBI2.png">
-                        <div class="card-header" style="display: flex; align-items: start; justify-content: space-between;">
-                            <h3>Uji Kemahiran Berbahasa Indonesia (UKBI)</h3>
-                            <i class="fa-solid fa-image" style="color: var(--accent); opacity: 0.5; font-size: 0.9rem;"></i>
-                        </div>
-                        <p class="card-organizer">Badan Pengembangan dan Pembinaan Bahasa</p>
-                        <p class="card-date">June 2026 - June 2028</p>
-                        <p>A certification that comprehensively measures Indonesian language proficiency, covering listening, responding to linguistic rules, reading, writing, and speaking skills in accordance with national standards.</p>
-                    </article>
-                    <div class="cta-buttons" style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
-                    <a href="achievement.html" class="btn btn-outline" style="text-decoration: none;">
-                    Learn More
-                    <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                    </div>
-                </div>
+                </a>
             </div>
         </section>
     </main>
@@ -242,5 +187,6 @@
     <script src="src/js/typing.js"></script>
     <script src="src/js/particles.js"></script>
     <script src="src/js/scroll.js"></script>
+    <script src="src/js/cursor.js"></script>
 </body>
 </html>
