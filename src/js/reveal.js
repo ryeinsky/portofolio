@@ -7,7 +7,7 @@ const observerCallback = (entries) => {
 
     entries.forEach(entry => {
 
-        if(entry.isIntersecting){
+        if (entry.isIntersecting) {
             entry.target.classList.add("scroll-reveal");
         }
 
@@ -20,14 +20,12 @@ const observer = new IntersectionObserver(
     observerOptions
 );
 
-document.querySelectorAll(".section").forEach(section => {
+function initReveal() {
 
-    observer.observe(section);
+    document.querySelectorAll(".section").forEach(section => {
 
-    const rect = section.getBoundingClientRect();
+        observer.observe(section);
 
-    if(rect.top < window.innerHeight && rect.bottom > 0){
-        section.classList.add("scroll-reveal");
-    }
+    });
 
-});
+}

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio</title>
     <meta name="description" content="Portofolio web sederhana untuk menampilkan biodata, skill, proyek, dan kontak.">
+    <link rel="stylesheet" href="src/css/loading.css">
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="src/css/typing.css">
     <link rel="stylesheet" href="src/css/cursor.css">
@@ -15,6 +16,17 @@
 </head>
 
 <body>
+    <div id="loader">
+        <div class="loader-content">
+            <img src="src/image/logo.png" alt="Logo" class="loader-logo">
+            <h2>Reina Sulistyani Arifin</h2>
+            <p>Loading...</p>
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <span id="progress-text">0%</span>
+        </div>
+    </div>
     <div class="cursor-dot"></div>
     <div class="cursor-outline"></div>
     <div id="scroll-progress"></div>
@@ -183,6 +195,7 @@
         <p>© 2026 Reina Sulistyani Arifin. All rights reserved</p>
     </footer>
 
+    <script src="src/js/loading.js"></script>
     <script src="src/js/transition.js"></script>
     <script src="src/js/reveal.js"></script>
     <script src="src/js/typing.js"></script>
