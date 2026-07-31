@@ -29,3 +29,9 @@ function initReveal() {
     });
 
 }
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initReveal);
+} else {
+    initReveal();
+}
