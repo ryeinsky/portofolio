@@ -2,30 +2,36 @@ const loader = document.getElementById("loader");
 const progressBar = document.getElementById("progress-bar");
 const progressText = document.getElementById("progress-text");
 
-let progress = 0;
+// Cek apakah loader sudah pernah ditampilkan
+if (sessionStorage.getItem("loaderShown")) {
 
-const interval = setInterval(() => {
+    loader.style.display = "none";
 
-    progress++;
+} else {
 
-    progressBar.style.width = progress + "%";
-    progressText.textContent = progress + "%";
+    sessionStorage.setItem("loaderShown", "true");
 
-    if(progress >= 100){
+    let progress = 0;
 
-        clearInterval(interval);
+    const interval = setInterval(() => {
 
-        setTimeout(() => {
-            loader.classList.add("hide");
+        progress++;
+
+        progressBar.style.width = progress + "%";
+        progressText.textContent = progress + "%";
+
+        if (progress >= 100) {
+
+            clearInterval(interval);
 
             setTimeout(() => {
 
-                initReveal();
+                loader.classList.add("hide");
 
-            }, 500);loader.classList.add("hide");
+            }, 300);
 
-        },300);
+        }
 
-    }
+    }, 40);
 
-},50);
+}
