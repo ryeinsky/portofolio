@@ -1,0 +1,143 @@
+@media screen and (max-width: 1024px) {
+    /* Tablet: keep desktop design intact, only override layout and sizing */
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    /* Hero section into one column with centered content */
+    .hero-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-avatar {
+        width: 240px;
+        height: 240px;
+        margin: 0 auto;
+        justify-self: center;
+        align-self: center;
+    }
+
+    .hero-avatar::before {
+        inset: -16px;
+    }
+
+    .hero-avatar img {
+        object-position: center center;
+    }
+
+    .cta-buttons {
+        justify-content: center;
+    }
+
+    /* Navbar remains horizontal but more compact */
+    .navbar {
+        padding: 0.9rem 0;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links .nav-link,
+    .nav-links .nav-link.active {
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
+    }
+
+    .nav-links .nav-link:hover,
+    .nav-links .nav-link.active {
+        width: 110px;
+    }
+
+    /* Section spacing and heading sizing for tablet */
+    .section {
+        padding: 3rem 0;
+    }
+
+    .section-title {
+        margin-bottom: 1.2rem;
+    }
+
+    .section-title p {
+        font-size: 1rem;
+        letter-spacing: 0.18em;
+    }
+
+    .section-title h2 {
+        font-size: clamp(1.35rem, 2.2vw, 1.75rem);
+    }
+
+    .section-button {
+        justify-content: center;
+    }
+
+    /* Skill, achievement, and work grids become two columns */
+    .skill-grid,
+    .achievement-grid,
+    .work-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+    }
+
+    /* About section becomes a single column */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .about-grid .avatar {
+        margin: 0 auto;
+    }
+
+    .about-grid p,
+    .about-grid .info-list {
+        width: 100%;
+    }
+
+    /* Contact section becomes a single column */
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .contact-intro {
+        max-width: 100%;
+        margin: 0 auto 2rem;
+    }
+
+    .contact-info {
+        text-align: left;
+    }
+
+    /* Reduce card padding slightly for better tablet proportions */
+    .achievement-card,
+    .skill-card,
+    .work-card {
+        padding: 1.5rem;
+    }
+
+    .achievement-year {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.7rem;
+    }
+
+    /* Footer remains centered and tidy */
+    footer {
+        padding: 1.5rem 0;
+        text-align: center;
+    }
+
+    footer .social-icons {
+        justify-content: center;
+        margin-top: 1.5rem;
+    }
+}
