@@ -1,242 +1,261 @@
-/* =====================================================
-   MOBILE RESPONSIVE
+/* ======================================================
+   MOBILE
    Screen <= 768px
-===================================================== */
+====================================================== */
 
 @media screen and (max-width:768px){
 
-    html{
-        font-size:14px;
-    }
+/* ===========================
+   RESET
+=========================== */
 
-    body{
-        overflow-x:hidden;
-        padding-bottom:110px;
-    }
-
-    body.loading{
-        overflow:hidden;
-        height:100vh;
-        touch-action:none;
-    }
-
-    /* ======================================
-                CURSOR
-    ====================================== */
-
-    .cursor-dot,
-    .cursor-outline,
-    .spark{
-        display:none!important;
-    }
-
-    *{
-        cursor:auto!important;
-    }
-
-    /* ======================================
-                LOADING
-    ====================================== */
-
-    .loading-screen{
-        position:fixed;
-        inset:0;
-        width:100%;
-        height:100%;
-        overflow:hidden;
-        touch-action:none;
-        z-index:99999;
-    }
-
-    /* =========================
-   NAVBAR
-========================= */
-
-.navbar{
-    position: sticky;
-    top: 15px;
-
-    width: fit-content;
-    margin: 15px auto;
-
-    z-index: 999;
+html{
+    font-size:14px;
+    scroll-behavior:smooth;
 }
 
-.logo{
-    display:none;
+body{
+    overflow-x:hidden;
+    padding:0;
+}
+
+body.loading{
+    overflow:hidden;
+    height:100vh;
+    touch-action:none;
+}
+
+*{
+    cursor:auto !important;
+}
+
+img{
+    max-width:100%;
+    height:auto;
+    display:block;
+}
+
+.cursor-dot,
+.cursor-outline,
+.spark{
+    display:none !important;
+}
+
+.loading-screen{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    touch-action:none;
+    z-index:99999;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar{
+    position: fixed;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    max-width: calc(100% - 24px);
+    padding: .75rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(15, 23, 42, .78);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 999px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    z-index: 9999;
+}
+
+.logo img{
+
+    width:42px;
+    height:42px;
+
+    border-radius:50%;
+
 }
 
 .nav-links{
 
-    width:100%;
-
     display:flex;
-
-    justify-content:space-around;
 
     align-items:center;
 
-    gap:.5rem;
+    gap:.45rem;
 
 }
 
 .nav-link{
 
-    width:44px;
-    height:44px;
+    width:42px;
+    height:42px;
 
     display:flex;
+
     justify-content:center;
+
     align-items:center;
 
     border-radius:50%;
+
+    padding:0;
+
+    flex-shrink:0;
+
 }
 
 .nav-link span{
+
     display:none;
+
+}
+
+.nav-link:hover{
+
+    transform:none;
+
 }
 
 .nav-link.active{
 
-    background: rgba(96,165,250,.18);
-
-    border: 1px solid rgba(96,165,250,.45);
-
-    color: var(--accent);
+    width:42px;
 
 }
 
-    /* ======================================
-                HERO
-    ====================================== */
+/* ===========================
+   HERO
+=========================== */
 
-    .hero{
-        min-height:100vh;
-        padding-top: 140px;
-    }
+.hero{
+    min-height:100vh;
+    padding-top:130px;
+    padding-bottom:60px;
+}
 
-    .hero-content{
+.hero-content{
+    width:min(100%,calc(100% - 32px));
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    gap:2rem;
+    margin:auto;
+}
 
-        display:flex;
+.hero-avatar{
+    order:1;
+    width:180px;
+    height:180px;
+    margin:auto;
+}
 
-        flex-direction:column;
+.hero-avatar::before{
 
-        align-items:center;
-
-        justify-content:center;
-
-        text-align:center;
-
-        gap:2rem;
-
-    }
-
-    .hero-avatar{
-
-        order:1;
-
-        width:190px;
-        height:190px;
-
-        margin:auto;
-
-    }
-
-    .hero-avatar::before{
-
-        inset:-10px;
-
-    }
-
-    .hero-text{
-
-        order:2;
-
-        max-width:100%;
-
-    }
-
-    .hero-text h1{
-
-        font-size:2.2rem;
-
-        line-height:1.2;
-
-    }
-
-    .hero-text h2{
-
-        font-size:1.05rem;
-
-        margin-top:.5rem;
-
-    }
-
-    .hero-text p{
-
-        font-size:.95rem;
-
-        margin:1rem auto;
-
-        max-width:500px;
-
-    }
-
-    /* ======================================
-                BUTTON
-    ====================================== */
-
-    .cta-buttons{
-
-        display:flex;
-
-        flex-direction:column;
-
-        align-items:center;
-
-        gap:.9rem;
-
-        width:100%;
-
-    }
-
-    .btn{
-
-        width:100%;
-
-        max-width:240px;
-
-        justify-content:center;
-
-        padding:14px 22px;
-
-    }
-
-    /* ======================================
-                SOCIAL ICON
-    ====================================== */
-
-    .social-icons{
-
-        justify-content:center;
-
-        flex-wrap:wrap;
-
-        gap:.8rem;
-
-        margin-top:2rem;
-
-    }
+    inset:-10px;
 
 }
 
-/* ======================================
-            SECTION
-====================================== */
+.hero-text{
+    order:2;
+    max-width:100%;
+}
+
+.hero-text h1{
+
+    font-size:2.2rem;
+
+    line-height:1.15;
+
+}
+
+.hero-text h2{
+
+    font-size:1.1rem;
+
+    margin-top:.6rem;
+
+}
+
+.hero-text p{
+
+    max-width:520px;
+
+    margin:1rem auto;
+
+    font-size:.95rem;
+
+    line-height:1.8;
+
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.cta-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:.8rem;
+
+    width:100%;
+
+}
+
+.cta-buttons .btn{
+
+    width:auto;
+
+    min-width:135px;
+
+    max-width:170px;
+
+    padding:12px 20px;
+
+    justify-content:center;
+
+}
+
+.social-icons{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:.8rem;
+
+    margin-top:1.5rem;
+
+}
+
+/* ===========================
+   SECTION
+=========================== */
 
 .section{
 
-    padding:70px 20px;
+    width:min(100%,calc(100% - 32px));
+
+    margin:auto;
+
+    padding:70px 0;
+
+    scroll-margin-top:90px;
 
 }
 
@@ -252,8 +271,6 @@
 
     font-size:.9rem;
 
-    letter-spacing:.15rem;
-
 }
 
 .section-title h2{
@@ -262,9 +279,9 @@
 
 }
 
-/* ======================================
-            ABOUT
-====================================== */
+/* ===========================
+   ABOUT
+=========================== */
 
 .about-grid{
 
@@ -282,8 +299,8 @@
 
 .avatar{
 
-    width:190px;
-    height:190px;
+    width:180px;
+    height:180px;
 
     margin:auto;
 
@@ -311,8 +328,6 @@
 
     flex-direction:column;
 
-    align-items:center;
-
     gap:1rem;
 
     margin-top:1.5rem;
@@ -321,15 +336,13 @@
 
 .info-list li{
 
-    width:100%;
-
     justify-content:center;
 
 }
 
-/* ======================================
-            SKILLS
-====================================== */
+/* ===========================
+   SKILLS
+=========================== */
 
 .skill-grid{
 
@@ -339,13 +352,27 @@
 
     gap:1rem;
 
+    align-items:stretch;
+
 }
 
 .skill-card{
 
-    padding:1.3rem;
+    padding:1.2rem;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
 
     text-align:center;
+
+    border-radius:18px;
+
+    min-height:180px;
 
 }
 
@@ -361,17 +388,21 @@
 
     font-size:1rem;
 
+    margin-bottom:.4rem;
+
 }
 
 .skill-card p{
 
     font-size:.85rem;
 
+    line-height:1.6;
+
 }
 
-/* ======================================
-        ACHIEVEMENT
-====================================== */
+/* ===========================
+   ACHIEVEMENT
+=========================== */
 
 .achievement-grid{
 
@@ -385,15 +416,27 @@
 
 .achievement-card{
 
-    padding:1.3rem;
+    padding:1.2rem;
+
+    display:flex;
+
+    flex-direction:column;
+
+    border-radius:18px;
+
+    min-height:220px;
 
 }
 
 .achievement-year{
 
+    align-self:flex-start;
+
     font-size:.75rem;
 
-    padding:.3rem .7rem;
+    padding:.35rem .7rem;
+
+    margin-bottom:.8rem;
 
 }
 
@@ -401,17 +444,33 @@
 
     font-size:1rem;
 
+    margin-bottom:.6rem;
+
 }
 
 .achievement-card p{
 
     font-size:.85rem;
 
+    line-height:1.6;
+
+    flex:1;
+
 }
 
-/* ======================================
-            WORK
-====================================== */
+.certificate-btn{
+
+    margin-top:1rem;
+
+    width:100%;
+
+    justify-content:center;
+
+}
+
+/* ===========================
+   WORK
+=========================== */
 
 .work-grid{
 
@@ -419,7 +478,7 @@
 
     grid-template-columns:1fr;
 
-    gap:1.2rem;
+    gap:1.3rem;
 
 }
 
@@ -427,15 +486,23 @@
 
     padding:1.3rem;
 
+    border-radius:18px;
+
 }
 
 .work-card img{
 
+    width:100%;
+
     border-radius:14px;
+
+    object-fit:cover;
 
 }
 
 .work-card h3{
+
+    margin-top:1rem;
 
     font-size:1.1rem;
 
@@ -443,25 +510,37 @@
 
 .work-card p{
 
+    margin-top:.6rem;
+
     font-size:.9rem;
 
-}
-
-/* ======================================
-            CARD
-====================================== */
-
-.skill-card,
-.achievement-card,
-.work-card{
-
-    border-radius:18px;
+    line-height:1.7;
 
 }
 
-/* ======================================
-            CONTACT
-====================================== */
+.work-links{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:.8rem;
+
+    margin-top:1rem;
+
+}
+
+.work-links .btn{
+
+    min-width:120px;
+
+}
+
+/* ===========================
+   CONTACT
+=========================== */
 
 .contact-container{
 
@@ -475,9 +554,17 @@
 
 .contact-intro{
 
+    text-align:center;
+
     max-width:100%;
 
-    text-align:center;
+}
+
+.contact-intro p{
+
+    font-size:.95rem;
+
+    line-height:1.8;
 
 }
 
@@ -528,56 +615,33 @@
 
 .form-group textarea{
 
-    min-height:140px;
-
     resize:vertical;
+
+    min-height:140px;
 
 }
 
 .contact-form .btn{
 
-    width:100%;
-
-    max-width:250px;
+    display:flex;
 
     margin:auto;
 
-}
-
-/* ======================================
-            SOCIAL
-====================================== */
-
-.social-icons,
-.social-links{
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    flex-wrap:wrap;
-
-    gap:.8rem;
+    max-width:220px;
 
 }
 
-.social-icons a,
-.social-links a{
-
-    width:48px;
-    height:48px;
-
-}
-
-/* ======================================
-            FOOTER
-====================================== */
+/* ===========================
+   FOOTER
+=========================== */
 
 footer{
 
-    padding:2rem 1rem 7rem;
+    width:min(100%,calc(100% - 32px));
+
+    margin:auto;
+
+    padding:3rem 0 2rem;
 
     text-align:center;
 
@@ -587,164 +651,200 @@ footer p{
 
     font-size:.85rem;
 
+    line-height:1.8;
+
 }
 
 footer .social-icons{
 
-    margin-top:1rem;
+    justify-content:center;
+
+    margin-top:1.5rem;
 
 }
 
-/* ======================================
-        TOUCH DEVICE
-====================================== */
+/* ===========================
+   TOUCH DEVICE
+=========================== */
 
-@media (hover:none){
+.nav-link:hover,
+.btn:hover,
+.skill-card:hover,
+.achievement-card:hover,
+.work-card:hover,
+.hero-avatar:hover,
+.avatar:hover,
+.social-icons a:hover,
+.certificate-btn:hover{
 
-    .nav-link:hover,
-    .btn:hover,
-    .skill-card:hover,
-    .achievement-card:hover,
-    .work-card:hover,
-    .hero-avatar:hover,
-    .avatar:hover,
-    .social-icons a:hover,
-    .certificate-btn:hover{
+    transform:none !important;
 
-        transform:none!important;
-        scale:1!important;
-        box-shadow:none!important;
-        filter:none!important;
-        border-color:inherit!important;
-        background:inherit!important;
+    scale:1 !important;
 
-    }
+    box-shadow:none !important;
 
-    .nav-link::before,
-    .nav-link::after,
-    .skill-card::before,
-    .achievement-card::before,
-    .work-card::before,
-    .hero-avatar::before{
-
-        animation:none!important;
-
-    }
+    filter:none !important;
 
 }
 
-/* ======================================
-        SMALL PHONE
-====================================== */
+.nav-link::before,
+.nav-link::after,
+.skill-card::before,
+.achievement-card::before,
+.work-card::before,
+.hero-avatar::before{
+
+    animation:none !important;
+
+}
+
+/* ===========================
+   SMALL PHONE
+=========================== */
 
 @media screen and (max-width:480px){
 
-    html{
+html{
 
-        font-size:13px;
+    font-size:13px;
 
-    }
+}
 
-    .navbar{
+.navbar{
 
-        bottom:16px;
+    width:calc(100% - 20px);
 
-        padding:.65rem .9rem;
+    padding:.65rem .8rem;
 
-    }
+}
 
-    .nav-link{
+.logo img{
 
-        width:44px;
-        height:44px;
+    width:36px;
 
-        font-size:15px;
+    height:36px;
 
-    }
+}
 
-    .hero{
+.nav-link{
 
-        padding:95px 16px 50px;
+    width:40px;
 
-    }
+    height:40px;
 
-    .hero-avatar{
+    font-size:.95rem;
 
-        width:165px;
-        height:165px;
+}
 
-    }
+.hero{
 
-    .hero-avatar::before{
+    padding-top:100px;
 
-        inset:-8px;
+}
 
-    }
+.hero-avatar{
 
-    .hero-text h1{
+    width:160px;
 
-        font-size:1.9rem;
+    height:160px;
 
-    }
+}
 
-    .hero-text h2{
+.hero-avatar::before{
 
-        font-size:.95rem;
+    inset:-8px;
 
-    }
+}
 
-    .hero-text p{
+.hero-text h1{
 
-        font-size:.9rem;
+    font-size:1.9rem;
 
-    }
+}
 
-    .btn{
+.hero-text h2{
 
-        max-width:220px;
+    font-size:1rem;
 
-        font-size:.9rem;
+}
 
-    }
+.hero-text p{
 
-    .section{
+    font-size:.9rem;
 
-        padding:55px 16px;
+}
 
-    }
+.cta-buttons{
 
-    .section-title h2{
+    gap:.6rem;
 
-        font-size:1.6rem;
+}
 
-    }
+.cta-buttons .btn{
 
-    .avatar{
+    min-width:120px;
 
-        width:165px;
-        height:165px;
+    padding:10px 16px;
 
-    }
+    font-size:.9rem;
 
-    .skill-grid,
-    .achievement-grid{
+}
 
-        grid-template-columns:1fr;
+.section{
 
-    }
+    padding:55px 0;
 
-    .skill-card,
-    .achievement-card,
-    .work-card{
+}
 
-        padding:1rem;
+.section-title h2{
 
-    }
+    font-size:1.6rem;
 
-    footer{
+}
 
-        padding-bottom:6.5rem;
+.avatar{
 
-    }
+    width:160px;
+
+    height:160px;
+
+}
+
+.skill-grid,
+.achievement-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.skill-card,
+.achievement-card,
+.work-card{
+
+    padding:1rem;
+
+    min-height:auto;
+
+}
+
+.work-links{
+
+    flex-direction:column;
+
+}
+
+.work-links .btn{
+
+    width:100%;
+
+}
+
+footer{
+
+    padding:2rem 0;
+
+}
+
+}
 
 }
