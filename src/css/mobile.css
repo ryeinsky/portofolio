@@ -1,257 +1,554 @@
+/* =====================================================
+   MOBILE RESPONSIVE
+   Screen <= 768px
+===================================================== */
+
 @media screen and (max-width: 768px) {
-    /* Prevent horizontal scrolling on mobile */
-    html,
+    html {
+        font-size: 14px;
+    }
+
     body {
         overflow-x: hidden;
+        padding-top: 0;
+        padding-bottom: 110px; /* NOTE: keep only if there's a floating/fixed
+           button (e.g. WhatsApp/CTA) that needs clearance at the bottom.
+           If there isn't one, this can be reduced to ~2rem — see comment below. */
     }
 
-    /* Hero layout becomes vertical with avatar above the text */
-    .hero-content {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "avatar"
-            "text";
-        gap: 1.5rem;
-        align-items: center;
-        justify-items: center;
+    body.loading {
+        overflow: hidden;
+        height: 100vh;
+        height: 100dvh; /* dvh accounts for mobile browser UI bars so the
+           page can't scroll/bounce behind them while loading */
+        overscroll-behavior: none;
+        touch-action: none;
     }
 
-    .hero-avatar {
-        grid-area: avatar;
-        width: 220px;
-        height: 220px;
-        margin: 0 auto;
-        justify-self: center;
-        align-self: center;
+    * {
+        cursor: auto !important;
     }
 
-    .hero-avatar::before {
-        inset: -14px;
+    img,
+    video {
+        display: block;
+        max-width: 100%;
+        height: auto;
     }
 
-    .hero-avatar img {
-        object-position: center center;
+    .cursor-dot,
+    .cursor-outline,
+    .spark {
+        display: none !important;
     }
 
-    .hero-text {
-        grid-area: text;
-        text-align: center;
-    }
-
-    /* Buttons stack vertically and fill width with a max size */
-    .cta-buttons {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.9rem;
+    .loading-screen {
+        position: fixed;
+        inset: 0;
         width: 100%;
+        height: 100vh;
+        height: 100dvh;
+        overflow: hidden;
+        overscroll-behavior: none;
+        touch-action: none;
+        z-index: 99999;
     }
 
-    .cta-buttons .btn {
-        width: 100%;
-        max-width: 300px;
-    }
+    /* =========================
+       MOBILE NAVBAR
+    ========================= */
 
-    .btn-outline,
-    .btn-primary,
-    .btn-secondary {
-        min-width: unset;
-    }
-
-    /* Mobile-friendly navbar with wrapping links */
     .navbar {
-        padding: 0.85rem 0;
+        position: sticky;
+        top: 12px;
+        width: fit-content;
+        max-width: calc(100% - 24px);
+        margin: 0 auto 2rem;
+        padding: 0.6rem 0.9rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(15, 23, 42, 0.72);
+        backdrop-filter: blur(18px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 999px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        z-index: 999;
+        transition: none;
+        animation: none;
     }
 
-    .logo img {
-        width: 56px;
-        height: 56px;
+    .logo {
+        display: none;
     }
 
     .nav-links {
         display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.45rem;
+    }
+
+    .nav-link {
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+        flex: 0 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        padding: 0;
+        font-size: 0.9rem;
+        transition: none;
+    }
+
+    .nav-link span {
+        display: none;
+    }
+
+    .nav-link:hover {
+        width: 38px;
+        background: transparent;
+        transform: none;
+    }
+
+    .nav-link.active {
+        width: 38px;
+        background: rgba(59, 130, 246, 0.18);
+        border: 1px solid rgba(59, 130, 246, 0.35);
+        color: var(--accent);
+        transform: none;
+    }
+
+    .hero {
+        min-height: 100vh;
+        padding-top: 1rem;
+        padding-bottom: 3rem;
+    }
+
+    .hero-content,
+    .section,
+    footer {
+        width: calc(100% - 1.5rem);
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .hero-avatar {
+        order: 1;
+        width: 190px;
+        height: 190px;
+        margin: 0 auto;
+    }
+
+    .hero-avatar::before {
+        inset: -10px;
+    }
+
+    .hero-text {
+        order: 2;
+        max-width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+
+    .hero-text h2 {
+        font-size: 1.05rem;
+        margin-top: 0.5rem;
+    }
+
+    .hero-text p {
+        font-size: 0.95rem;
+        margin: 1rem auto;
+        max-width: 500px;
+    }
+
+    .cta-buttons {
+        display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 0.6rem;
+        align-items: center;
+        gap: 0.7rem;
+        width: 100%;
     }
 
-    .nav-links .nav-link,
-    .nav-links .nav-link.active {
-        width: auto;
-        min-width: 48px;
-        height: auto;
-        padding: 0.7rem 0.9rem;
-        gap: 0.6rem;
+    .btn {
+        width: 100%;
+        max-width: 200px;
         justify-content: center;
+        padding: 11px 16px;
+        font-size: 0.9rem;
     }
 
-    .nav-links .nav-link span {
-        max-width: 90px;
-        opacity: 1;
+    .cta-buttons .btn {
+        width: auto;
+        flex: 1 1 auto;
+        max-width: 160px;
     }
 
-    /* Comfortable section padding on mobile */
     .section {
-        padding: 1.8rem 1rem;
+        padding: 70px 0;
+        scroll-margin-top: 6rem;
     }
 
     .section-title {
-        margin-bottom: 1rem;
+        text-align: center;
+        margin-bottom: 2rem;
     }
 
     .section-title p {
-        font-size: 0.95rem;
-        letter-spacing: 0.14em;
+        font-size: 0.9rem;
+        letter-spacing: 0.15rem;
     }
 
     .section-title h2 {
-        font-size: clamp(1.2rem, 5vw, 1.6rem);
+        font-size: 1.8rem;
     }
 
-    /* One-column layout for mobile grids */
-    .skill-grid,
-    .achievement-grid,
-    .work-grid {
-        grid-template-columns: 1fr;
+    .about-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .avatar {
+        width: 190px;
+        height: 190px;
+        margin: auto;
+    }
+
+    .about-content {
+        width: 100%;
+    }
+
+    .about-content p {
+        font-size: 0.95rem;
+        line-height: 1.8;
+    }
+
+    .info-list {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         gap: 1rem;
+        margin-top: 1.5rem;
     }
 
-    .home-skills .skill-card,
-    .achievement-card,
-    .work-card {
-        padding: 1.4rem;
+    .info-list li {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .skill-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.7rem;
+        align-items: stretch;
+    }
+
+    .skill-card {
+        padding: 0.9rem 0.6rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 100%;
+    }
+
+    .skill-card i {
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .skill-card h3 {
+        font-size: 0.85rem;
+    }
+
+    .skill-card p {
+        font-size: 0.72rem;
+    }
+
+    .achievement-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.7rem;
+        align-items: stretch;
+    }
+
+    .achievement-card {
+        padding: 0.9rem 0.6rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        min-height: 100%;
     }
 
     .achievement-year {
-        font-size: 0.8rem;
-        padding: 0.3rem 0.7rem;
+        font-size: 0.65rem;
+        padding: 0.25rem 0.55rem;
     }
 
-    /* About section one-column with comfortable spacing */
-    .about-grid {
+    .achievement-card h3 {
+        font-size: 0.85rem;
+    }
+
+    .achievement-card p {
+        font-size: 0.72rem;
+    }
+
+    .work-grid {
+        display: grid;
         grid-template-columns: 1fr;
         gap: 1.2rem;
     }
 
-    .about-grid .avatar {
-        margin: 0 auto;
+    .work-card {
+        padding: 1.3rem;
     }
 
-    .about-grid p,
-    .about-grid .info-list {
-        width: 100%;
+    .work-card img {
+        border-radius: 14px;
     }
 
-    /* Contact layout becomes fully vertical */
+    .work-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .work-card p {
+        font-size: 0.9rem;
+    }
+
+    .skill-card,
+    .achievement-card,
+    .work-card {
+        border-radius: 18px;
+    }
+
     .contact-container {
+        display: grid;
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 2rem;
     }
 
     .contact-intro {
         max-width: 100%;
-        margin: 0 auto 1.8rem;
+        text-align: center;
     }
 
     .contact-info {
-        width: 100%;
-    }
-
-    .social-icons,
-    .social-links,
-    footer .social-icons {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.8rem;
-    }
-
-    .social-icons a,
-    .social-links a,
-    footer .social-icons a {
-        min-width: 48px;
-    }
-
-    /* Font sizing optimized for mobile reading */
-    .hero-text p,
-    .about-grid p,
-    .achievement-card p,
-    .work-card p,
-    .contact-intro {
-        font-size: 0.95rem;
-    }
-
-    footer {
-        padding: 1.3rem 0;
         text-align: center;
     }
-}
 
-@media screen and (max-width: 480px) {
-    /* Further refinement for smaller phones */
-    .hero-avatar {
-        width: 190px;
-        height: 190px;
+    .contact-info ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
     }
 
-    .hero-avatar::before {
-        inset: -12px;
+    .contact-info li {
+        justify-content: center;
     }
 
-    .nav-links {
-        gap: 0.45rem;
-    }
-
-    .nav-links .nav-link,
-    .nav-links .nav-link.active {
-        padding: 0.6rem 0.85rem;
-        font-size: 0.9rem;
-    }
-
-    .section {
-        padding: 1.2rem 0.8rem;
-    }
-
-    .section-title p {
-        font-size: 0.85rem;
-    }
-
-    .section-title h2 {
-        font-size: clamp(1.1rem, 6vw, 1.35rem);
-    }
-
-    .cta-buttons {
+    .contact-form {
         width: 100%;
     }
 
-    .hero-text h1 {
-        font-size: clamp(1.8rem, 8vw, 2.2rem);
-    }
-
-    .hero-text h2 {
-        font-size: clamp(1rem, 6vw, 1.3rem);
-    }
-
-    .home-skills .skill-card i {
-        font-size: 2rem;
-    }
-
-    .contact-container {
-        gap: 1.2rem;
+    .form-group {
+        margin-bottom: 1rem;
     }
 
     .form-group input,
     .form-group textarea {
-        padding: 0.8rem 0.95rem;
+        width: 100%;
+        padding: 0.9rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    .form-group textarea {
+        min-height: 140px;
+        resize: vertical;
+    }
+
+    .contact-form .btn {
+        width: 100%;
+        max-width: 250px;
+        margin: auto;
+    }
+
+    /* Shared base for hero + footer social icon rows.
+       .social-icons keeps its own margin-top below; footer overrides
+       that further down via `footer .social-icons`. */
+    .social-icons,
+    .social-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+    }
+
+    .social-icons {
+        margin-top: 2rem;
+    }
+
+    .social-icons a,
+    .social-links a {
+        width: 38px;
+        height: 38px;
+        font-size: 0.95rem;
     }
 
     footer {
-        padding: 1rem 0;
+        padding: 2rem 1rem 7rem; /* see body padding-bottom note above —
+           trim this and the body value together if there's no floating button */
+        text-align: center;
     }
 
-    footer .social-icons a {
-        width: 50px;
-        height: 50px;
-        font-size: 20px;
+    footer p {
+        font-size: 0.85rem;
+    }
+
+    footer .social-icons {
+        margin-top: 1rem;
+    }
+}
+
+/* ======================================
+        TOUCH DEVICE
+====================================== */
+
+@media (hover: none) {
+    .nav-link:hover,
+    .btn:hover,
+    .skill-card:hover,
+    .achievement-card:hover,
+    .work-card:hover,
+    .hero-avatar:hover,
+    .avatar:hover,
+    .social-icons a:hover,
+    .certificate-btn:hover {
+        transform: none !important;
+        scale: 1 !important;
+        box-shadow: none !important;
+        filter: none !important;
+        border-color: inherit !important;
+        background: inherit !important;
+    }
+
+    .nav-link::before,
+    .nav-link::after,
+    .skill-card::before,
+    .achievement-card::before,
+    .work-card::before,
+    .hero-avatar::before {
+        animation: none !important;
+    }
+}
+
+/* ======================================
+        SMALL PHONE
+====================================== */
+
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 13px;
+    }
+
+    .navbar {
+        padding: 0.65rem 0.9rem;
+    }
+
+    .nav-link {
+        width: 34px;
+        height: 34px;
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 0.95rem 0 3rem;
+    }
+
+    .hero-avatar {
+        width: 165px;
+        height: 165px;
+    }
+
+    .hero-avatar::before {
+        inset: -8px;
+    }
+
+    .hero-text h1 {
+        font-size: 1.9rem;
+    }
+
+    .hero-text h2 {
+        font-size: 0.95rem;
+    }
+
+    .hero-text p {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        max-width: 170px;
+        font-size: 0.85rem;
+        padding: 10px 14px;
+    }
+
+    .cta-buttons .btn {
+        max-width: 140px;
+    }
+
+    .section {
+        padding: 55px 0;
+    }
+
+    .section-title h2 {
+        font-size: 1.6rem;
+    }
+
+    .avatar {
+        width: 165px;
+        height: 165px;
+    }
+
+    .skill-grid,
+    .achievement-grid {
+        gap: 0.5rem;
+    }
+
+    .skill-card,
+    .achievement-card {
+        padding: 0.7rem 0.4rem;
+    }
+
+    .work-card {
+        padding: 1rem;
+    }
+
+    .social-icons a,
+    .social-links a {
+        width: 34px;
+        height: 34px;
+        font-size: 0.85rem;
+    }
+
+    footer {
+        padding-bottom: 6.5rem;
     }
 }
