@@ -3,20 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reina Sulistyani Arifin</title>
-    <link rel="icon" type="image" href="src/image/logo.png">
-    <meta name="description" content="Portofolio web sederhana untuk menampilkan biodata, skill, proyek, dan kontak.">
-    <link rel="stylesheet" href="src/css/loading.css">
+    <title>Reina Sulistyani Arifin - Portofolio</title>
+    <link rel="icon" type="image/png" href="src/image/logo.png">
+    <meta name="description" content="Portofolio web pribadi Reina Sulistyani Arifin - QA & Web Developer.">
+
+    <!-- CSS STYLESHEETS -->
     <link rel="stylesheet" href="src/css/style.css">
-    <link rel="stylesheet" href="src/css/typing.css">
+    <link rel="stylesheet" href="src/css/loading.css">
     <link rel="stylesheet" href="src/css/cursor.css">
+    <link rel="stylesheet" href="src/css/typing.css">
     <link rel="stylesheet" href="src/css/tablet.css">
     <link rel="stylesheet" href="src/css/mobile.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="src/css/responsive.css">
+
+    <!-- FONT AWESOME ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
+    <!-- PRELOADER SCREEN -->
     <div id="loader">
         <div class="loader-content">
             <img src="src/image/logo.png" alt="Logo" class="loader-logo">
@@ -28,11 +33,15 @@
             <span id="progress-text">0%</span>
         </div>
     </div>
+
+    <!-- MOUSE CURSOR & PROGRESS -->
     <div class="cursor-dot"></div>
     <div class="cursor-outline"></div>
     <div id="scroll-progress"></div>
     <canvas id="stars"></canvas>
-     <header id="home" class="hero">
+
+    <!-- HERO & NAVIGATION SECTION -->
+    <header id="home" class="hero">
         <nav class="navbar">
             <div class="nav-links">
                 <a href="index.html" class="nav-link active">
@@ -67,36 +76,34 @@
                     <span class="cursor">|</span>
                 </h2>
                 <p>Informatics student passionate about technology, software development, and quality assurance. Experienced in QA through internship and always eager to learn, solve problems, and build reliable digital solutions.</p>
-                <div class="cta-buttons" style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
-                    <a href="about.html" class="btn btn-outline" style="text-decoration: none;">
-                    Learn More
-                    <i class="fa-solid fa-arrow-right"></i>
+                
+                <div class="cta-buttons">
+                    <a href="about.html" class="btn btn-outline">
+                        Learn More
+                        <i class="fa-solid fa-arrow-right"></i>
                     </a>
-                    <a href="achievement.html" class="btn btn-primary" style="text-decoration: none;">View My Achievements</a>
-                    <a href="contact.html" class="btn btn-secondary" style="text-decoration: none;">Contact Me</a>
-                </div>
-                    <div class="social-icons">
-                        <a href="#">
-                            <i class="fa-solid fa-globe"></i></a>
-                        <a href="https://www.facebook.com/reina.arifin.7" target="_blank">
-                            <i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/reinasulistyani/" target="_blank">
-                            <i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/in/reinasulistyaniarifin" target="_blank">
-                            <i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="https://github.com/ryeinsky" target="_blank">
-                            <i class="fa-brands fa-github"></i></a>
-                    </div>
+                    <a href="achievement.html" class="btn btn-primary">View My Achievements</a>
+                    <a href="contact.html" class="btn btn-secondary">Contact Me</a>
                 </div>
 
+                <div class="social-icons">
+                    <a href="#" title="Website"><i class="fa-solid fa-globe"></i></a>
+                    <a href="https://www.facebook.com/reina.arifin.7" target="_blank" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/reinasulistyani/" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/reinasulistyaniarifin" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/ryeinsky" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+
             <div class="hero-avatar">
-                <img src="src/image/rein.png" alt="Foto Profil">
+                <img src="src/image/rein.png" alt="Foto Profil Reina">
             </div>
         </section>
     </header>
 
-
+    <!-- MAIN CONTENT SECTION -->
     <main>
+        <!-- SKILLS SECTION -->
         <section class="home-skills section">
             <div class="section-title">
                 <p>MY SKILLS</p>
@@ -106,34 +113,22 @@
                 <article class="skill-card">
                     <i class="fa-solid fa-vial"></i>
                     <h3>Software Testing</h3>
-                    <p>
-                        Perform manual testing to ensure software quality, functionality,
-                        and reliability.
-                    </p>
+                    <p>Perform manual testing to ensure software quality, functionality, and reliability.</p>
                 </article>
                 <article class="skill-card">
                     <i class="fa-solid fa-list-check"></i>
                     <h3>Test Case Design</h3>
-                    <p>
-                        Create structured and comprehensive test cases based on
-                        requirements and user scenarios.
-                    </p>
+                    <p>Create structured and comprehensive test cases based on requirements and user scenarios.</p>
                 </article>
                 <article class="skill-card">
                     <i class="fa-solid fa-code"></i>
                     <h3>Web Development</h3>
-                    <p>
-                        Build responsive websites using HTML, CSS, and JavaScript while
-                        continuously improving development skills.
-                    </p>
+                    <p>Build responsive websites using HTML, CSS, and JavaScript while continuously improving development skills.</p>
                 </article>
                 <article class="skill-card">
                     <i class="fa-solid fa-bug"></i>
                     <h3>Bug Reporting</h3>
-                    <p>
-                        Identify issues, reproduce bugs, and provide clear reports to
-                        support the development process.
-                    </p>
+                    <p>Identify issues, reproduce bugs, and provide clear reports to support the development process.</p>
                 </article>
             </div>
             <div class="section-button">
@@ -144,6 +139,7 @@
             </div>
         </section>
 
+        <!-- ACHIEVEMENTS HIGHLIGHT SECTION -->
         <section class="home-achievements section">
             <div class="section-title">
                 <p>ACHIEVEMENTS</p>
@@ -152,38 +148,21 @@
             <div class="achievement-grid">
                 <article class="achievement-card">
                     <i class="fa-solid fa-briefcase"></i>
-                    <span class="achievement-year">
-                        2025
-                    </span>
+                    <span class="achievement-year">2025</span>
                     <h3>QA Internship</h3>
-                    <p>
-                        Completed an internship as a Quality Assurance Intern,
-                        gaining experience in software testing, test case creation,
-                        bug reporting, and application validation.
-                    </p>
+                    <p>Completed an internship as a Quality Assurance Intern, gaining experience in software testing, test case creation, bug reporting, and application validation.</p>
                 </article>
                 <article class="achievement-card">
                     <i class="fa-solid fa-certificate"></i>
-                    <span class="achievement-year">
-                        2025
-                    </span>
+                    <span class="achievement-year">2025</span>
                     <h3>Professional Certificates</h3>
-                    <p>
-                        Earned several certificates in technology,
-                        software testing, and web development through
-                        online learning platforms.
-                    </p>
+                    <p>Earned several certificates in technology, software testing, and web development through online learning platforms.</p>
                 </article>
                 <article class="achievement-card">
                     <i class="fa-solid fa-laptop-code"></i>
-                    <span class="achievement-year">
-                        2026
-                    </span>
+                    <span class="achievement-year">2026</span>
                     <h3>Portfolio Projects</h3>
-                    <p>
-                        Built personal projects to improve programming,
-                        front-end development, and quality assurance skills.
-                    </p>
+                    <p>Built personal projects to improve programming, front-end development, and quality assurance skills.</p>
                 </article>
             </div>
 
@@ -196,6 +175,7 @@
         </section>
     </main>
 
+    <!-- FOOTER SECTION -->
     <footer>
         <div class="social-icons">
             <a href="#" title="Website"><i class="fa-solid fa-globe"></i></a>
@@ -207,6 +187,7 @@
         <p>© 2026 Reina Sulistyani Arifin. All rights reserved</p>
     </footer>
 
+    <!-- JAVASCRIPT SCRIPTS -->
     <script src="src/js/theme.js"></script>
     <script src="src/js/loading.js"></script>
     <script src="src/js/transition.js"></script>

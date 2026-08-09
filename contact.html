@@ -3,22 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reina Sulistyani Arifin</title>
-    <link rel="icon" type="image" href="src/image/logo.png">
-    <meta name="description" content="Hubungi saya untuk proyek atau pertanyaan seputar web development.">
+    <title>Contact Me - Reina Sulistyani Arifin</title>
+    <link rel="icon" type="image/png" href="src/image/logo.png">
+    <meta name="description" content="Hubungi Reina Sulistyani Arifin melalui formulir kontak atau media sosial.">
+
+    <!-- CSS STYLESHEETS -->
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="src/css/cursor.css">
     <link rel="stylesheet" href="src/css/tablet.css">
     <link rel="stylesheet" href="src/css/mobile.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="src/css/responsive.css">
+
+    <!-- FONT AWESOME ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
+    <!-- MOUSE CURSOR & PROGRESS -->
     <div class="cursor-dot"></div>
     <div class="cursor-outline"></div>
     <div id="scroll-progress"></div>
     <canvas id="stars"></canvas>
+
+    <!-- HERO & NAVIGATION SECTION -->
     <header class="hero">
         <nav class="navbar">
             <div class="nav-links">
@@ -45,152 +52,115 @@
             </div>
         </nav>
 
+        <!-- CONTACT SECTION -->
         <section id="contact" class="section contact-section">
             <div class="section-title">
-                <p>CONTACT</p>
-                <h2>Let's Connect</h2>
+                <p>GET IN TOUCH</p>
+                <h2>Contact Me</h2>
             </div>
+            
             <p class="contact-intro">
-                I'm open to internship opportunities, entry-level positions, and collaborations in Software Quality Assurance, Software Testing, and Web Development. If you'd like to discuss a project or simply connect, feel free to reach out.
+                Have a project in mind, want to discuss software quality assurance, or just want to say hi? 
+                Feel free to send a message or connect through social media!
             </p>
+
             <div class="contact-container">
-                <!-- Contact Information -->
+                <!-- Contact Info Details -->
                 <div class="contact-info">
-                    <h3>Get in Touch</h3>
+                    <h3>Contact Information</h3>
+                    
                     <div class="info-item">
                         <i class="fa-solid fa-envelope"></i>
                         <div>
                             <p class="info-label">Email</p>
-                            <a href="mailto:sulistyanireina@gmail.com">
-                                sulistyanireina@gmail.com
-                            </a>
+                            <a href="mailto:reinasulistyani03@gmail.com">reinasulistyani03@gmail.com</a>
                         </div>
                     </div>
+
                     <div class="info-item">
-                        <i class="fa-solid fa-map-pin"></i>
+                        <i class="fa-solid fa-location-dot"></i>
                         <div>
                             <p class="info-label">Location</p>
-                            <p>Indonesia</p>
+                            <p>Surabaya, Indonesia</p>
                         </div>
                     </div>
+
                     <div class="info-item">
-                        <i class="fa-solid fa-phone"></i>
+                        <i class="fa-solid fa-share-nodes"></i>
                         <div>
-                            <p class="info-label">Phone</p>
-                            <a href="tel:+6283857818583">
-                                +62 838-5781-8583
-                            </a>
+                            <p class="info-label">Social Media</p>
+                            <div class="social-links">
+                                <a href="https://www.linkedin.com/in/reinasulistyaniarifin" target="_blank">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                    LinkedIn
+                                </a>
+                                <a href="https://github.com/ryeinsky" target="_blank">
+                                    <i class="fa-brands fa-github"></i>
+                                    GitHub
+                                </a>
+                                <a href="https://www.instagram.com/reinasulistyani/" target="_blank">
+                                    <i class="fa-brands fa-instagram"></i>
+                                    Instagram
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <h3 style="margin-top:2rem; margin-bottom:1rem;">
-                        Find Me Online
-                    </h3>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/reina.arifin.7" target="_blank">
-                            <i class="fa-brands fa-facebook-f"></i>
-                            <span>Facebook</span>
-                        </a>
-                        <a href="https://www.instagram.com/reinasulistyani/" target="_blank">
-                            <i class="fa-brands fa-instagram"></i>
-                            <span>Instagram</span>
-                        </a>
-                        <a href="https://www.linkedin.com/in/reinasulistyaniarifin" target="_blank">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                            <span>LinkedIn</span>
-                        </a>
-                        <a href="https://github.com/ryeinsky" target="_blank">
-                            <i class="fa-brands fa-github"></i>
-                            <span>GitHub</span>
-                        </a>
                     </div>
                 </div>
 
                 <!-- Contact Form -->
-                <form
-                    id="contact-form"
-                    class="contact-form"
-                    action="https://formspree.io/f/xaqrzwny"
-                    method="POST">
-
+                <form id="contactForm" class="contact-form">
                     <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            placeholder="Enter your full name"
-                            required>
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="Enter your email address"
-                            required>
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="john@example.com" required>
                     </div>
 
                     <div class="form-group">
                         <label for="subject">Subject</label>
-                        <input
-                            type="text"
-                            id="subject"
-                            name="subject"
-                            placeholder="What would you like to discuss?"
-                            required>
+                        <input type="text" id="subject" name="subject" placeholder="Project Inquiry / Job Opportunity" required>
                     </div>
 
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea
-                            id="message"
-                            name="message"
-                            rows="5"
-                            placeholder="Write your message here..."
-                            required></textarea>
+                        <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
                     </div>
 
-                    <button
-                        type="submit"
-                        class="btn btn-primary">
+                    <button type="submit" class="btn btn-primary" style="cursor: pointer; border: none; width: 100%;">
                         Send Message
+                        <i class="fa-solid fa-paper-plane"></i>
                     </button>
-
                 </form>
-
-                <!-- Success Popup -->
-                <div id="success-popup" class="popup">
-
-                    <div class="popup-content">
-
-                        <i class="fa-solid fa-circle-check"></i>
-
-                        <h3>Message Sent!</h3>
-
-                        <p>
-                            Thank you for contacting me.<br>
-                            I'll reply as soon as possible.
-                        </p>
-
-                        <button id="close-popup">
-                            Close
-                        </button>
-
-                    </div>
-
-                </div>
+            </div>
         </section>
     </header>
 
-    <main>
-    </main>
-
+    <!-- FOOTER SECTION -->
     <footer>
+        <div class="social-icons">
+            <a href="#" title="Website"><i class="fa-solid fa-globe"></i></a>
+            <a href="https://www.facebook.com/reina.arifin.7" target="_blank" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/reinasulistyani/" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/reinasulistyaniarifin" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/ryeinsky" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+        </div>
         <p>© 2026 Reina Sulistyani Arifin. All rights reserved</p>
     </footer>
 
+    <!-- SUCCESS POPUP MODAL -->
+    <div id="successPopup" class="popup">
+        <div class="popup-content">
+            <i class="fa-solid fa-circle-check"></i>
+            <h3>Message Sent!</h3>
+            <p>Thank you for reaching out. I will get back to you as soon as possible.</p>
+            <button id="closePopup">Close</button>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT SCRIPTS -->
     <script src="src/js/theme.js"></script>
     <script src="src/js/transition.js"></script>
     <script src="src/js/reveal.js"></script>

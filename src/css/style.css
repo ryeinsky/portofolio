@@ -1,3 +1,6 @@
+/* ==========================================================
+   GLOBAL DESIGN SYSTEM & CSS VARIABLES
+   ========================================================== */
 :root {
     --bg: #120914;
     --bg-soft: #1c0e20;
@@ -10,7 +13,9 @@
     --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* LIGHT MODE THEME OVERRIDES */
+/* ==========================================================
+   LIGHT MODE THEME OVERRIDES
+   ========================================================== */
 body.light-mode {
     --bg: #fff9fb;
     --bg-soft: #f9ecf2;
@@ -87,6 +92,9 @@ body.light-mode .loader-content h2 {
     color: #2b141e;
 }
 
+/* ==========================================================
+   RESET & BASE STYLES
+   ========================================================== */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -115,7 +123,9 @@ img {
     height: auto;
 }
 
-/* UNIFIED CONTAINER ALIGNMENT SYSTEM */
+/* ==========================================================
+   UNIFIED CONTAINER ALIGNMENT SYSTEM
+   ========================================================== */
 .container,
 .hero-content,
 .section,
@@ -129,6 +139,9 @@ footer {
     box-sizing: border-box;
 }
 
+/* ==========================================================
+   HERO & FLOATING NAVBAR STYLING
+   ========================================================== */
 .hero {
     min-height: calc(100vh - 110px);
     padding-bottom: 3rem;
@@ -205,6 +218,9 @@ footer {
     box-shadow: 0 0 18px rgba(216, 27, 96, 0.45);
 }
 
+/* ==========================================================
+   THEME TOGGLE BUTTON STYLING
+   ========================================================== */
 .theme-toggle-btn {
     width: 40px;
     height: 40px;
@@ -229,7 +245,6 @@ footer {
     transform: scale(1.08);
 }
 
-/* STRICT TOGGLE ICON VISIBILITY - PREVENTS STACKING */
 .theme-toggle-btn .icon-sun {
     display: none !important;
 }
@@ -247,6 +262,9 @@ body.light-mode .theme-toggle-btn .icon-moon {
     display: none !important;
 }
 
+/* ==========================================================
+   HERO TYPOGRAPHY & BUTTONS
+   ========================================================== */
 .eyebrow {
     color: var(--accent);
     font-weight: 600;
@@ -346,6 +364,9 @@ body.light-mode .theme-toggle-btn .icon-moon {
     box-shadow: 0 0 15px rgba(216, 27, 96, .5), 0 0 35px rgba(216, 27, 96, .3);
 }
 
+/* ==========================================================
+   AVATAR PROFILE IMAGE
+   ========================================================== */
 .avatar,
 .hero-avatar {
     position: relative;
@@ -403,6 +424,9 @@ body.light-mode .theme-toggle-btn .icon-moon {
     align-items: center;
 }
 
+/* ==========================================================
+   SECTIONS & CARDS SYSTEM
+   ========================================================== */
 .section {
     padding: 5rem 0;
     opacity: 1;
@@ -491,6 +515,9 @@ body.light-mode .theme-toggle-btn .icon-moon {
     width: 100%;
 }
 
+/* ==========================================================
+   FLOATING CERTIFICATE PREVIEW
+   ========================================================== */
 .preview-container {
     position: fixed;
     display: none;
@@ -519,6 +546,9 @@ body.light-mode .theme-toggle-btn .icon-moon {
     object-fit: cover;
 }
 
+/* ==========================================================
+   CONTACT PAGE & FORM STYLING
+   ========================================================== */
 .contact-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -629,6 +659,9 @@ body.light-mode .theme-toggle-btn .icon-moon {
     min-height: 140px;
 }
 
+/* ==========================================================
+   FOOTER STYLING
+   ========================================================== */
 footer {
     padding: 2.5rem 0 2rem;
     text-align: center;
@@ -670,6 +703,9 @@ footer p {
     margin-top: 0.4rem;
 }
 
+/* ==========================================================
+   BACKGROUND CANVAS & SCROLL PROGRESS
+   ========================================================== */
 #stars {
     position: fixed;
     inset: 0;
@@ -690,6 +726,9 @@ footer p {
     box-shadow: 0 0 12px rgba(216, 27, 96, .7), 0 0 25px rgba(253, 108, 156, .5);
 }
 
+/* ==========================================================
+   POPUP MODAL STYLING
+   ========================================================== */
 .popup {
     position: fixed;
     inset: 0;
