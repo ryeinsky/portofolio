@@ -1,10 +1,10 @@
 #typing{
-    color: #60a5fa;
+    color: #fd6c9c;
     font-weight: 600;
 }
 
 .cursor{
-    color:#60a5fa;
+    color:#fd6c9c;
     animation:blink .8s infinite;
 }
 

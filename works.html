@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>REINA SULISTYANI ARIFIN</title>
+  <link rel="icon" type="image/png" href="assets/img/logo.png"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+  <link href="assets/css/style.css" rel="stylesheet"/>
+  <link href="assets/css/works.css" rel="stylesheet"/>
+</head>
+<body>
+  <!-- TopNavBar -->
+  <header class="navbar">
+    <div class="navbar-inner">
+      <a href="home.html" class="nav-brand">
+        <img src="assets/img/logo.png" alt="Logo Rein" style="height: 40px; width: auto; display: block;"/>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a class="nav-link" href="home.html">Home</a></li>
+          <li><a class="nav-link" href="about.html">About</a></li>
+          <li><a class="nav-link" href="achievements.html">Achievements</a></li>
+          <li><a class="nav-link" href="skills.html">Skills</a></li>
+          <li><a class="nav-link active" href="works.html">Works</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle theme">
+          <span class="material-symbols-outlined theme-icon-light">light_mode</span>
+          <span class="material-symbols-outlined theme-icon-dark">dark_mode</span>
+        </button>
+        <a href="contact.html" class="btn btn-primary-container">Get in Touch</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container section">
+    <!-- Hero Section for Works -->
+    <section style="margin-bottom: 64px;">
+      <div style="max-width: 680px;">
+        <span class="badge badge-tertiary" style="margin-bottom: 16px;">Portfolio</span>
+        <h1 style="margin-bottom: 24px;">
+          Beberapa <span class="text-primary">Karya Terbaru</span>
+        </h1>
+        <p class="text-muted" style="font-size: 18px;">
+          Kumpulan proyek dan eksplorasi web development yang telah saya buat. Setiap proyek berfokus pada kerapian struktur, kemudahan penggunaan, dan tampilan visual yang menarik.
+        </p>
+      </div>
+    </section>
+
+    <!-- Portfolio Bento Grid -->
+    <div class="works-grid-bento">
+      <!-- Project 1 -->
+      <div class="project-card col-span-4">
+        <div style="padding: 16px;">
+          <span class="material-symbols-outlined text-primary" style="font-size: 40px; margin-bottom: 16px;">storefront</span>
+          <h3 style="margin-bottom: 8px;">Landing Page Produk</h3>
+          <p class="text-muted" style="margin-bottom: 24px; font-size: 14px;">
+            Website promosi modern dengan desain yang fokus pada konversi dan pengalaman pengguna yang responsif.
+          </p>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px;">
+            <span class="badge-pill">HTML5</span>
+            <span class="badge-pill">CSS3</span>
+            <span class="badge-pill">Responsive</span>
+          </div>
+          <a href="#" class="btn btn-primary btn-sm" style="display: inline-flex; align-items: center; gap: 6px;">
+            Lihat Demo
+            <span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card col-span-4">
+        <div style="padding: 16px;">
+          <span class="material-symbols-outlined text-primary" style="font-size: 40px; margin-bottom: 16px;">dashboard</span>
+          <h3 style="margin-bottom: 8px;">Dashboard Sederhana</h3>
+          <p class="text-muted" style="margin-bottom: 24px; font-size: 14px;">
+            Antarmuka dashboard yang bersih untuk menampilkan data penting secara terstruktur dan informatif.
+          </p>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px;">
+            <span class="badge-pill">JavaScript</span>
+            <span class="badge-pill">UI Design</span>
+            <span class="badge-pill">CSS Grid</span>
+          </div>
+          <a href="#" class="btn btn-primary btn-sm" style="display: inline-flex; align-items: center; gap: 6px;">
+            Lihat Demo
+            <span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card col-span-4">
+        <div style="padding: 16px;">
+          <span class="material-symbols-outlined text-primary" style="font-size: 40px; margin-bottom: 16px;">person_book</span>
+          <h3 style="margin-bottom: 8px;">Portfolio Pribadi</h3>
+          <p class="text-muted" style="margin-bottom: 24px; font-size: 14px;">
+            Portofolio yang elegan dan mudah dikustomisasi sesuai kebutuhan personal branding dan kualifikasi teknis.
+          </p>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px;">
+            <span class="badge-pill">Vanilla Web</span>
+            <span class="badge-pill">Interaktivitas</span>
+          </div>
+          <a href="#" class="btn btn-primary btn-sm" style="display: inline-flex; align-items: center; gap: 6px;">
+            Lihat Demo
+            <span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testing Methodologies CTA -->
+    <section class="works-cta-box">
+      <div style="max-width: 600px;">
+        <h2 style="color: #ffffff; margin-bottom: 16px;">Ingin membuat proyek serupa?</h2>
+        <p style="color: rgba(255,255,255,0.9); font-size: 18px;">
+          Saya selalu terbuka untuk berkolaborasi dan mengembangkan solusi web yang menarik.
+        </p>
+      </div>
+      <a href="contact.html" class="btn btn-lg" style="background-color: #ffffff; color: var(--primary);">
+        Mulai Kolaborasi
+      </a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">Reina Sulistyani Arifin</div>
+        <p class="footer-desc">Informatics Student @ UPN Veteran Jawa Timur</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="https://www.facebook.com/reina.arifin.7" target="_blank" class="footer-link">Facebook</a></li>
+        <li><a href="https://www.instagram.com/reinasulistyani/" target="_blank" class="footer-link">Instagram</a></li>
+        <li><a href="https://www.linkedin.com/in/reinasulistyaniarifin" target="_blank" class="footer-link">LinkedIn</a></li>
+        <li><a href="https://github.com/ryeinsky" target="_blank" class="footer-link">GitHub</a></li>
+      </ul>
+      <div class="footer-copy">
+        <p>© 2026 Reina Sulistyani Arifin. Semua hak dilindungi.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/works.js"></script>
+</body>
+</html>
