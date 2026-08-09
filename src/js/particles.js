@@ -39,8 +39,8 @@ for (let i = 0; i < STAR_COUNT; i++) {
 
         // Warna
         color:
-            Math.random() < 0.25
-                ? "96,165,250"
+            Math.random() < 0.3
+                ? "253,108,156"
                 : "255,255,255"
 
     });
