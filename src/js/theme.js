@@ -1,4 +1,7 @@
-// Theme Toggle System (Dark / Light Mode)
+/**
+ * Theme Toggle System (Dark / Light Mode)
+ * Persists selected theme state across pages using localStorage.
+ */
 (function() {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme === "light") {
