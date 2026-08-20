@@ -507,6 +507,89 @@ body.light-mode .theme-toggle-btn .icon-moon {
     box-shadow: 0 15px 35px rgba(216, 27, 96, 0.2), 0 0 20px rgba(253, 108, 156, 0.25);
 }
 
+/* ==========================================================
+   ACHIEVEMENT CATEGORIES
+   ========================================================== */
+
+.achievement-category {
+    margin-bottom: 4rem;
+}
+
+.achievement-category:last-child {
+    margin-bottom: 0;
+}
+
+
+/* CATEGORY TITLE */
+
+.category-title {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 1.5rem;
+}
+
+.category-title i {
+    color: var(--accent);
+    font-size: 1.2rem;
+}
+
+.category-title h3 {
+    margin: 0;
+    color: var(--text);
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+
+/* ACHIEVEMENT CARD HEADER */
+
+.achievement-card .card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.achievement-card .card-header h3 {
+    margin: 0;
+    flex: 1;
+}
+
+.achievement-card .card-header > i {
+    color: var(--accent);
+    opacity: 0.5;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+
+/* ORGANIZER */
+
+.achievement-card .card-organizer {
+    margin-top: 0.8rem;
+    color: var(--text);
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+
+/* DATE */
+
+.achievement-card .card-date {
+    margin-top: 0.25rem;
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+
+/* DESCRIPTION */
+
+.achievement-card > p:last-child {
+    margin-top: 0.8rem;
+    line-height: 1.6;
+}
+
 .section-button {
     display: flex;
     justify-content: center;
