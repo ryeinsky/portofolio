@@ -234,7 +234,7 @@
     .skill-grid,
     .work-grid,
     .achievement-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 2fr;
         gap: 1.2rem;
     }
 
@@ -245,9 +245,8 @@
         border-radius: 16px;
     }
 
-    /* ==========================================================
-       CONTACT PAGE & FORM
-       ========================================================== */
+    /* =========================
+   ACHIEVEMENT CATEGORIES
     .contact-container {
         grid-template-columns: 1fr;
         gap: 2rem;
