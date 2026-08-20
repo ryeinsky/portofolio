@@ -1,9 +1,11 @@
 /* ======================================================
-   MOBILE & SMALL SCREENS RESPONSIVE (<= 768px)
+   MOBILE & TABLET RESPONSIVE STYLESHEET (<= 768px)
+   Enhanced 2-Column Grid, Clean Typography & Compact Layout
    ====================================================== */
+
 @media screen and (max-width: 768px) {
     /* ==========================================================
-       RESET & ACCESSIBILITY
+       RESET & BASE ADJUSTMENTS
        ========================================================== */
     html {
         font-size: 14px;
@@ -31,36 +33,28 @@
         display: block;
     }
 
-    /* Hide custom cursor elements on mobile touch devices */
+    /* Disable custom cursor elements on mobile touch devices */
     .cursor-dot,
     .cursor-outline,
     .spark {
         display: none !important;
     }
 
-    .loading-screen {
-        position: fixed;
-        inset: 0;
-        overflow: hidden;
-        touch-action: none;
-        z-index: 99999;
-    }
-
     /* ==========================================================
-       CONTAINER & ALIGNMENT
+       CONTAINER & UNIFIED ALIGNMENT
        ========================================================== */
     .container,
     .hero-content,
     .section,
     footer {
         width: 100%;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
+        padding-left: 1.1rem;
+        padding-right: 1.1rem;
         box-sizing: border-box;
     }
 
     /* ==========================================================
-       NAVBAR
+       FLOATING NAVBAR
        ========================================================== */
     .navbar {
         position: fixed;
@@ -73,12 +67,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background: rgba(18, 9, 20, 0.85);
-        backdrop-filter: blur(18px);
-        -webkit-backdrop-filter: blur(18px);
-        border: 1px solid rgba(227, 189, 195, 0.18);
+        background: rgba(18, 9, 20, 0.88);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(227, 189, 195, 0.22);
         border-radius: 999px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
         z-index: 9999;
     }
 
@@ -117,7 +111,7 @@
        ========================================================== */
     .hero {
         min-height: auto;
-        padding: 20px 0 40px 0;
+        padding: 15px 0 35px 0;
     }
 
     .hero-content {
@@ -127,22 +121,22 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        gap: 1.8rem;
+        gap: 1.5rem;
         margin: 0 auto;
     }
 
-    /* Photo Avatar placed ALWAYS on top of description */
+    /* Avatar positioned above title for compact vertical flow */
     .hero-avatar,
     .avatar {
         order: -1 !important;
-        width: min(210px, 58vw);
+        width: min(175px, 46vw);
         height: auto;
         margin: 0 auto;
     }
 
     .hero-avatar::before,
     .avatar::before {
-        inset: -10px;
+        inset: -8px;
     }
 
     .hero-text {
@@ -154,122 +148,290 @@
         align-items: center;
     }
 
+    .hero-text .eyebrow {
+        font-size: 0.95rem;
+        margin-bottom: 0.35rem;
+        letter-spacing: 0.15em;
+    }
+
     .hero-text h1 {
-        font-size: 1.9rem;
-        line-height: 1.2;
+        font-size: 1.8rem;
+        line-height: 1.22;
+        margin-bottom: 0.35rem;
     }
 
     .hero-text h2 {
-        font-size: 1.1rem;
-        line-height: 1.3;
+        font-size: 1.05rem;
+        line-height: 1.35;
+        margin-bottom: 0.8rem;
+        min-height: 26px;
     }
 
     .hero-text p {
         max-width: 100%;
-        margin: 0 auto 1.4rem auto;
-        font-size: 0.95rem;
+        margin: 0 auto 1.2rem auto;
+        font-size: 0.9rem;
+        line-height: 1.55;
     }
 
+    /* 2-Column Balanced CTA Buttons */
     .cta-buttons {
-        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
         width: 100%;
-        gap: 10px;
-        flex-wrap: wrap;
+        max-width: 360px;
+        margin-top: 1.2rem;
     }
 
     .cta-buttons .btn {
         width: 100%;
-        max-width: 100%;
-        justify-content: center;
+        height: 42px;
+        font-size: 12px;
+        padding: 0 8px;
         white-space: nowrap;
-        font-size: 14px;
-        padding: 0 16px;
-        height: 44px;
+        border-radius: 999px;
+        justify-content: center;
+    }
+
+    /* Learn More spans full width on top */
+    .cta-buttons .btn:first-child {
+        grid-column: span 2;
     }
 
     .hero .social-icons {
         justify-content: center;
         width: 100%;
-        gap: 12px;
-        margin-top: 1.5rem;
+        gap: 10px;
+        margin-top: 1.3rem;
     }
 
     .hero .social-icons a {
-        width: 42px;
-        height: 42px;
-        font-size: 16px;
+        width: 40px;
+        height: 40px;
+        font-size: 15px;
     }
 
     /* ==========================================================
-       SECTIONS & GRIDS
+       SECTION TITLES
        ========================================================== */
     .section {
-        padding: 40px 0;
+        padding: 35px 0;
     }
 
     .section-title {
         text-align: center;
-        margin-bottom: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .section-title p {
+        font-size: 0.9rem;
+        letter-spacing: 0.15em;
+        margin-bottom: 0.3rem;
     }
 
     .section-title h2 {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
 
     .section-button {
-        margin-top: 2.5rem;
+        margin-top: 2rem;
         width: 100%;
         display: flex;
         justify-content: center;
     }
 
-    .about-grid {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 2rem;
+    .section-button .btn {
+        height: 42px;
+        padding: 0 20px;
+        font-size: 13px;
     }
 
+    /* ==========================================================
+       2-COLUMN COMPACT SKILL GRID
+       ========================================================== */
     .skill-grid,
-    .work-grid,
-    .achievement-grid {
-        grid-template-columns: 2fr;
-        gap: 1.2rem;
+    .work-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
     }
 
     .skill-card,
-    .work-card,
-    .achievement-card {
-        padding: 1.5rem 1.2rem;
-        border-radius: 16px;
+    .work-card {
+        padding: 1rem 0.85rem;
+        border-radius: 14px;
+        box-sizing: border-box;
+        text-align: left;
     }
 
-    /* =========================
-   ACHIEVEMENT CATEGORIES
+    .skill-card i {
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+        display: inline-block;
+        color: var(--accent);
+    }
+
+    .skill-card h3 {
+        font-size: 0.95rem;
+        line-height: 1.3;
+        margin-bottom: 0.3rem;
+    }
+
+    .skill-card p {
+        font-size: 0.78rem;
+        line-height: 1.45;
+        color: var(--muted);
+    }
+
+    /* ==========================================================
+       2-COLUMN COMPACT ACHIEVEMENT GRID
+       ========================================================== */
+    .achievement-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+    }
+
+    .achievement-card {
+        padding: 1rem 0.85rem;
+        border-radius: 14px;
+        text-align: left;
+        position: relative;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .achievement-card .card-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.4rem;
+        margin-bottom: 0.45rem;
+    }
+
+    .achievement-card .card-header i {
+        font-size: 1.15rem;
+        color: var(--accent);
+    }
+
+    .achievement-card .achievement-year {
+        font-size: 0.68rem;
+        padding: 0.12rem 0.45rem;
+        border-radius: 999px;
+        white-space: nowrap;
+    }
+
+    .achievement-card h3 {
+        font-size: 0.88rem;
+        line-height: 1.3;
+        margin-bottom: 0.25rem;
+        font-weight: 600;
+    }
+
+    .achievement-card .achievement-category {
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        margin-bottom: 0.4rem;
+        color: var(--accent);
+    }
+
+    .achievement-card p {
+        font-size: 0.75rem;
+        line-height: 1.45;
+        color: var(--muted);
+        margin: 0;
+    }
+
+    /* Tap preview badge indicator for mobile touch devices */
+    .achievement-card[data-preview]::after {
+        content: "\f06e";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        position: absolute;
+        bottom: 8px;
+        right: 9px;
+        font-size: 0.68rem;
+        color: var(--accent);
+        opacity: 0.45;
+    }
+
+    /* ==========================================================
+       EXPERIENCE SECTION / TIMELINE ACCENT (about.html)
+       ========================================================== */
+    #experience .skill-grid {
+        grid-template-columns: 1fr;
+        gap: 0.9rem;
+    }
+
+    #experience .skill-card {
+        border-left: 3px solid var(--accent);
+        padding: 1.1rem 1rem;
+        border-radius: 12px;
+    }
+
+    #experience .skill-card .achievement-year {
+        margin-bottom: 0.4rem;
+    }
+
+    #experience .skill-card h3 {
+        font-size: 1.05rem;
+        margin-bottom: 0.35rem;
+    }
+
+    /* ==========================================================
+       CONTACT SECTION & FORM
+       ========================================================== */
     .contact-container {
         grid-template-columns: 1fr;
-        gap: 2rem;
-        margin-top: 1.8rem;
+        gap: 1.6rem;
+        margin-top: 1.4rem;
+    }
+
+    .contact-intro {
+        text-align: center;
+        font-size: 0.9rem;
+        line-height: 1.55;
+        margin-bottom: 1.2rem;
     }
 
     .contact-info {
+        text-align: left;
+    }
+
+    .contact-info h3 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
         text-align: center;
     }
 
     .info-item {
         text-align: left;
-        padding: 1rem;
+        padding: 0.85rem 1rem;
         border-radius: 12px;
+        margin-bottom: 0.9rem;
+        gap: 0.9rem;
+    }
+
+    .info-item i {
+        font-size: 1.3rem;
+        min-width: 24px;
+    }
+
+    .info-label {
+        font-size: 0.8rem;
     }
 
     .social-links {
         display: flex;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         justify-content: flex-start;
         align-items: center;
-        gap: 0.4rem;
+        gap: 0.45rem;
         width: 100%;
+        margin-top: 0.6rem;
     }
 
     .social-links a {
@@ -277,8 +439,8 @@
         align-items: center;
         justify-content: center;
         gap: 0.35rem;
-        padding: 0.45rem 0.7rem;
-        font-size: 0.8rem;
+        padding: 0.45rem 0.75rem;
+        font-size: 0.78rem;
         white-space: nowrap;
         border-radius: 999px;
         flex-shrink: 0;
@@ -286,12 +448,33 @@
 
     .contact-form {
         width: 100%;
-        gap: 1.2rem;
+        gap: 1rem;
+    }
+
+    .form-group {
+        gap: 0.35rem;
+    }
+
+    .form-group label {
+        font-size: 0.85rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 0.75rem 0.9rem;
+        font-size: 0.88rem;
+        border-radius: 8px;
+    }
+
+    .form-group textarea {
+        min-height: 110px;
     }
 
     .contact-form .btn {
         width: 100%;
+        height: 44px;
         justify-content: center;
+        font-size: 0.9rem;
     }
 
     /* ==========================================================
@@ -305,7 +488,7 @@
     footer .social-icons {
         gap: 10px;
         margin-top: 0;
-        margin-bottom: 0.9rem;
+        margin-bottom: 0.8rem;
         justify-content: center;
     }
 
@@ -343,11 +526,14 @@
         font-size: 1.65rem;
     }
 
+    .hero-text h2 {
+        font-size: 0.98rem;
+    }
+
     .cta-buttons .btn {
-        width: 100%;
-        font-size: 13px;
-        padding: 0 14px;
-        height: 42px;
+        font-size: 11.5px;
+        padding: 0 6px;
+        height: 40px;
     }
 
     footer .social-icons a {
@@ -355,14 +541,22 @@
         height: 32px;
         font-size: 13px;
     }
+}
 
-    .social-links {
-        gap: 0.3rem;
+/* ==========================================================
+   ULTRA COMPACT MOBILE SCREENS (<= 340px)
+   ========================================================== */
+@media screen and (max-width: 340px) {
+    .skill-grid,
+    .achievement-grid {
+        grid-template-columns: 1fr;
     }
 
-    .social-links a {
-        padding: 0.4rem 0.55rem;
-        font-size: 0.75rem;
-        gap: 0.3rem;
+    .cta-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-buttons .btn:first-child {
+        grid-column: span 1;
     }
 }

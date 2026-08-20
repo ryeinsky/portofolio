@@ -5,6 +5,8 @@ if (isDesktop) {
     const dot = document.querySelector(".cursor-dot");
     const outline = document.querySelector(".cursor-outline");
 
+    if (dot && outline) {
+
     let mouseX = 0;
     let mouseY = 0;
 
@@ -85,6 +87,8 @@ if (isDesktop) {
         setTimeout(() => {
             spark.remove();
         }, 800);
+
+    }
 
     }
 

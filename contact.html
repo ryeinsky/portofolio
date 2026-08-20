@@ -108,7 +108,7 @@
                 </div>
 
                 <!-- Contact Form -->
-                <form id="contact-form"
+                <form id="contact-form" class="contact-form"
                 action="https://formspree.io/f/xaqrzwny"
                 method="POST">
                     <div class="form-group">
@@ -153,29 +153,21 @@
     </footer>
 
     <!-- SUCCESS POPUP MODAL -->
-    <div id="successPopup" class="popup">
-        <div class="popup-content">
-            <i class="fa-solid fa-circle-check"></i>
-            <h3>Message Sent!</h3>
-            <p>Thank you for reaching out. I will get back to you as soon as possible.</p>
-            <button id="closePopup">Close</button>
-        </div>
-    </div>
     <div id="success-popup" class="popup">
-    <div class="popup-content">
-        <div class="popup-icon">
-            <i class="fa-solid fa-check"></i>
+        <div class="popup-content">
+            <div class="popup-icon">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <h3>Message Sent!</h3>
+            <p>
+                Thank you for reaching out.
+                I'll get back to you as soon as possible.
+            </p>
+            <button id="close-popup" class="popup-button">
+                Close
+            </button>
         </div>
-        <h3>Message Sent!</h3>
-        <p>
-            Thank you for reaching out.
-            I'll get back to you as soon as possible.
-        </p>
-        <button id="close-popup" class="popup-button">
-            Close
-        </button>
     </div>
-</div>
 
     <!-- JAVASCRIPT SCRIPTS -->
     <script src="src/js/theme.js"></script>
