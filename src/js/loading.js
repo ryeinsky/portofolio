@@ -3,26 +3,41 @@ const progressBar = document.getElementById("progress-bar");
 const progressText = document.getElementById("progress-text");
 
 if (loader) {
-    if (sessionStorage.getItem("loaderShown")) {
-        loader.style.display = "none";
-    } else {
-        sessionStorage.setItem("loaderShown", "true");
+    const DURATION_MS = 3000; // 3.0 detik
+    let startTimestamp = null;
 
-        let progress = 0;
-        // Interval 28ms x 100 = ~2.8 detik untuk animasi progress bar yang halus dan rileks
-        const interval = setInterval(() => {
-            progress++;
-            if (progressBar) progressBar.style.width = progress + "%";
-            if (progressText) progressText.textContent = progress + "%";
+    function renderProgress(timestamp) {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const elapsed = timestamp - startTimestamp;
+        const progressRatio = Math.min(elapsed / DURATION_MS, 1);
+        const percentage = Math.min(Math.floor(progressRatio * 100), 100);
 
-            if (progress >= 100) {
-                clearInterval(interval);
+        if (progressBar) {
+            progressBar.style.width = (progressRatio * 100) + "%";
+        }
+        if (progressText) {
+            progressText.textContent = percentage + "%";
+        }
+
+        if (progressRatio < 1) {
+            requestAnimationFrame(renderProgress);
+        } else {
+            if (progressBar) progressBar.style.width = "100%";
+            if (progressText) progressText.textContent = "100%";
+
+            // Jeda singkat setelah 100% sebelum memulai transisi fade out
+            setTimeout(() => {
+                loader.classList.add("hide");
+                finishLoadingState();
                 setTimeout(() => {
-                    loader.classList.add("hide");
-                }, 400);
-            }
-        }, 28);
+                    loader.style.display = "none";
+                }, 900);
+            }, 350);
+        }
     }
+
+    // Jalankan animasi frame-by-frame yang halus
+    requestAnimationFrame(renderProgress);
 }
 
 function finishLoadingState() {
@@ -33,5 +48,5 @@ if (document.readyState === "complete") {
     finishLoadingState();
 } else {
     window.addEventListener("load", finishLoadingState);
-    setTimeout(finishLoadingState, 3500); // Safety fallback
+    setTimeout(finishLoadingState, 6500); // Safety fallback
 }

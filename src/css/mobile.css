@@ -1,6 +1,6 @@
 /* ======================================================
    MOBILE & TABLET RESPONSIVE STYLESHEET (<= 768px)
-   Enhanced 2-Column Grid, Clean Typography & Compact Layout
+   Ultra-Clean 2-Column Grid, Edge-Safe Margins & Zero Overflow
    ====================================================== */
 
 @media screen and (max-width: 768px) {
@@ -10,9 +10,12 @@
     html {
         font-size: 14px;
         scroll-behavior: smooth;
+        max-width: 100vw;
+        overflow-x: hidden;
     }
 
     body {
+        max-width: 100vw;
         overflow-x: hidden;
         padding-top: 85px;
     }
@@ -25,6 +28,7 @@
 
     * {
         cursor: auto !important;
+        box-sizing: border-box;
     }
 
     img {
@@ -41,16 +45,18 @@
     }
 
     /* ==========================================================
-       CONTAINER & UNIFIED ALIGNMENT
+       CONTAINER & UNIFIED ALIGNMENT (EDGE-SAFE PADDING)
        ========================================================== */
     .container,
     .hero-content,
     .section,
     footer {
         width: 100%;
-        padding-left: 1.1rem;
-        padding-right: 1.1rem;
+        max-width: 100vw;
+        padding-left: 1rem;
+        padding-right: 1rem;
         box-sizing: border-box;
+        overflow-x: hidden;
     }
 
     /* ==========================================================
@@ -74,6 +80,7 @@
         border-radius: 999px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
         z-index: 9999;
+        box-sizing: border-box;
     }
 
     .nav-links {
@@ -89,6 +96,7 @@
         font-size: 13px;
         gap: 6px;
         border-radius: 999px;
+        box-sizing: border-box;
     }
 
     .nav-link i {
@@ -104,14 +112,20 @@
         height: 36px;
         font-size: 14px;
         margin-left: 4px;
+        flex-shrink: 0;
+        box-sizing: border-box;
     }
 
     /* ==========================================================
        HERO SECTION & AVATAR
        ========================================================== */
     .hero {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
         min-height: auto;
         padding: 15px 0 35px 0;
+        box-sizing: border-box;
     }
 
     .hero-content {
@@ -123,15 +137,18 @@
         text-align: center;
         gap: 1.5rem;
         margin: 0 auto;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     /* Avatar positioned above title for compact vertical flow */
     .hero-avatar,
     .avatar {
         order: -1 !important;
-        width: min(175px, 46vw);
+        width: min(170px, 46vw);
         height: auto;
         margin: 0 auto;
+        box-sizing: border-box;
     }
 
     .hero-avatar::before,
@@ -146,57 +163,67 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        box-sizing: border-box;
     }
 
     .hero-text .eyebrow {
-        font-size: 0.95rem;
+        font-size: 0.92rem;
         margin-bottom: 0.35rem;
         letter-spacing: 0.15em;
     }
 
     .hero-text h1 {
-        font-size: 1.8rem;
+        font-size: 1.75rem;
         line-height: 1.22;
         margin-bottom: 0.35rem;
+        word-break: break-word;
     }
 
     .hero-text h2 {
-        font-size: 1.05rem;
+        font-size: 1.02rem;
         line-height: 1.35;
         margin-bottom: 0.8rem;
         min-height: 26px;
+        word-break: break-word;
     }
 
     .hero-text p {
         max-width: 100%;
         margin: 0 auto 1.2rem auto;
-        font-size: 0.9rem;
+        font-size: 0.88rem;
         line-height: 1.55;
+        word-break: break-word;
     }
 
-    /* 2-Column Balanced CTA Buttons */
+    /* Responsive Flex CTA Buttons (No Horizontal Overflow) */
     .cta-buttons {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        flex-wrap: wrap;
         gap: 8px;
         width: 100%;
-        max-width: 360px;
+        max-width: 350px;
         margin-top: 1.2rem;
+        justify-content: center;
+        box-sizing: border-box;
     }
 
     .cta-buttons .btn {
-        width: 100%;
+        flex: 1 1 calc(50% - 6px);
+        min-width: 0;
         height: 42px;
         font-size: 12px;
         padding: 0 8px;
         white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
         border-radius: 999px;
         justify-content: center;
+        box-sizing: border-box;
     }
 
-    /* Learn More spans full width on top */
+    /* Learn More spans full width at the top */
     .cta-buttons .btn:first-child {
-        grid-column: span 2;
+        flex: 1 1 100%;
     }
 
     .hero .social-icons {
@@ -204,6 +231,7 @@
         width: 100%;
         gap: 10px;
         margin-top: 1.3rem;
+        box-sizing: border-box;
     }
 
     .hero .social-icons a {
@@ -216,7 +244,8 @@
        SECTION TITLES
        ========================================================== */
     .section {
-        padding: 35px 0;
+        padding: 35px 1rem;
+        box-sizing: border-box;
     }
 
     .section-title {
@@ -225,13 +254,14 @@
     }
 
     .section-title p {
-        font-size: 0.9rem;
+        font-size: 0.88rem;
         letter-spacing: 0.15em;
         margin-bottom: 0.3rem;
     }
 
     .section-title h2 {
-        font-size: 1.5rem;
+        font-size: 1.45rem;
+        word-break: break-word;
     }
 
     .section-button {
@@ -245,104 +275,129 @@
         height: 42px;
         padding: 0 20px;
         font-size: 13px;
+        max-width: 100%;
     }
 
     /* ==========================================================
-       2-COLUMN COMPACT SKILL GRID
+       2-COLUMN COMPACT SKILL GRID (EDGE-SAFE & MIN-WIDTH 0)
        ========================================================== */
+    #skills h3[style] {
+        font-size: 1.15rem !important;
+        gap: 0.5rem !important;
+        word-break: break-word;
+    }
+
     .skill-grid,
     .work-grid {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.8rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.75rem;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .skill-card,
     .work-card {
-        padding: 1rem 0.85rem;
+        padding: 0.9rem 0.75rem;
         border-radius: 14px;
         box-sizing: border-box;
         text-align: left;
+        min-width: 0;
+        word-break: break-word;
+        overflow-wrap: break-word;
     }
 
     .skill-card i {
-        font-size: 1.4rem;
-        margin-bottom: 0.5rem;
+        font-size: 1.3rem;
+        margin-bottom: 0.45rem;
         display: inline-block;
         color: var(--accent);
     }
 
     .skill-card h3 {
-        font-size: 0.95rem;
-        line-height: 1.3;
-        margin-bottom: 0.3rem;
+        font-size: 0.88rem;
+        line-height: 1.25;
+        margin-bottom: 0.25rem;
+        word-break: break-word;
     }
 
     .skill-card p {
-        font-size: 0.78rem;
-        line-height: 1.45;
+        font-size: 0.75rem;
+        line-height: 1.42;
         color: var(--muted);
+        word-break: break-word;
     }
 
     /* ==========================================================
-       2-COLUMN COMPACT ACHIEVEMENT GRID
+       2-COLUMN COMPACT ACHIEVEMENT GRID (EDGE-SAFE)
        ========================================================== */
     .achievement-grid {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.8rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.75rem;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .achievement-card {
-        padding: 1rem 0.85rem;
+        padding: 0.9rem 0.75rem;
         border-radius: 14px;
         text-align: left;
         position: relative;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
+        min-width: 0;
+        word-break: break-word;
+        overflow-wrap: break-word;
     }
 
     .achievement-card .card-header {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 0.4rem;
-        margin-bottom: 0.45rem;
+        gap: 0.35rem;
+        margin-bottom: 0.4rem;
+        width: 100%;
     }
 
     .achievement-card .card-header i {
-        font-size: 1.15rem;
+        font-size: 1.1rem;
         color: var(--accent);
+        flex-shrink: 0;
     }
 
     .achievement-card .achievement-year {
-        font-size: 0.68rem;
-        padding: 0.12rem 0.45rem;
+        font-size: 0.65rem;
+        padding: 0.12rem 0.4rem;
         border-radius: 999px;
         white-space: nowrap;
+        flex-shrink: 0;
     }
 
     .achievement-card h3 {
-        font-size: 0.88rem;
-        line-height: 1.3;
+        font-size: 0.85rem;
+        line-height: 1.25;
         margin-bottom: 0.25rem;
         font-weight: 600;
+        word-break: break-word;
     }
 
     .achievement-card .achievement-category {
-        font-size: 0.7rem;
+        font-size: 0.68rem;
         font-weight: 600;
         letter-spacing: 0.04em;
-        margin-bottom: 0.4rem;
+        margin-bottom: 0.35rem;
         color: var(--accent);
+        word-break: break-word;
     }
 
     .achievement-card p {
-        font-size: 0.75rem;
-        line-height: 1.45;
+        font-size: 0.72rem;
+        line-height: 1.42;
         color: var(--muted);
         margin: 0;
+        word-break: break-word;
     }
 
     /* Tap preview badge indicator for mobile touch devices */
@@ -351,9 +406,9 @@
         font-family: "Font Awesome 6 Free";
         font-weight: 900;
         position: absolute;
-        bottom: 8px;
-        right: 9px;
-        font-size: 0.68rem;
+        bottom: 7px;
+        right: 8px;
+        font-size: 0.65rem;
         color: var(--accent);
         opacity: 0.45;
     }
@@ -368,7 +423,7 @@
 
     #experience .skill-card {
         border-left: 3px solid var(--accent);
-        padding: 1.1rem 1rem;
+        padding: 1rem 0.9rem;
         border-radius: 12px;
     }
 
@@ -377,51 +432,70 @@
     }
 
     #experience .skill-card h3 {
-        font-size: 1.05rem;
-        margin-bottom: 0.35rem;
+        font-size: 1rem;
+        margin-bottom: 0.3rem;
     }
 
     /* ==========================================================
-       CONTACT SECTION & FORM
+       CONTACT SECTION & FORM (EDGE-SAFE)
        ========================================================== */
     .contact-container {
         grid-template-columns: 1fr;
-        gap: 1.6rem;
-        margin-top: 1.4rem;
+        gap: 1.5rem;
+        margin-top: 1.2rem;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .contact-intro {
         text-align: center;
-        font-size: 0.9rem;
+        font-size: 0.88rem;
         line-height: 1.55;
         margin-bottom: 1.2rem;
+        word-break: break-word;
     }
 
     .contact-info {
         text-align: left;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .contact-info h3 {
-        font-size: 1.25rem;
+        font-size: 1.2rem;
         margin-bottom: 1rem;
         text-align: center;
     }
 
     .info-item {
         text-align: left;
-        padding: 0.85rem 1rem;
+        padding: 0.8rem 0.9rem;
         border-radius: 12px;
-        margin-bottom: 0.9rem;
-        gap: 0.9rem;
+        margin-bottom: 0.8rem;
+        gap: 0.8rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .info-item > div {
+        min-width: 0;
+        flex: 1;
+        word-break: break-word;
+    }
+
+    .info-item a {
+        word-break: break-all;
+        font-size: 0.88rem;
     }
 
     .info-item i {
-        font-size: 1.3rem;
-        min-width: 24px;
+        font-size: 1.25rem;
+        min-width: 22px;
+        flex-shrink: 0;
     }
 
     .info-label {
-        font-size: 0.8rem;
+        font-size: 0.78rem;
     }
 
     .social-links {
@@ -429,9 +503,9 @@
         flex-wrap: wrap;
         justify-content: flex-start;
         align-items: center;
-        gap: 0.45rem;
+        gap: 0.4rem;
         width: 100%;
-        margin-top: 0.6rem;
+        margin-top: 0.5rem;
     }
 
     .social-links a {
@@ -439,35 +513,41 @@
         align-items: center;
         justify-content: center;
         gap: 0.35rem;
-        padding: 0.45rem 0.75rem;
-        font-size: 0.78rem;
+        padding: 0.4rem 0.7rem;
+        font-size: 0.75rem;
         white-space: nowrap;
         border-radius: 999px;
         flex-shrink: 0;
+        box-sizing: border-box;
     }
 
     .contact-form {
         width: 100%;
-        gap: 1rem;
+        gap: 0.9rem;
+        box-sizing: border-box;
     }
 
     .form-group {
         gap: 0.35rem;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .form-group label {
-        font-size: 0.85rem;
+        font-size: 0.82rem;
     }
 
     .form-group input,
     .form-group textarea {
-        padding: 0.75rem 0.9rem;
-        font-size: 0.88rem;
+        padding: 0.75rem 0.85rem;
+        font-size: 0.85rem;
         border-radius: 8px;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .form-group textarea {
-        min-height: 110px;
+        min-height: 105px;
     }
 
     .contact-form .btn {
@@ -475,14 +555,16 @@
         height: 44px;
         justify-content: center;
         font-size: 0.9rem;
+        box-sizing: border-box;
     }
 
     /* ==========================================================
        FOOTER
        ========================================================== */
     footer {
-        padding: 2rem 0 1.5rem;
+        padding: 2rem 1rem 1.5rem;
         text-align: center;
+        box-sizing: border-box;
     }
 
     footer .social-icons {
@@ -500,7 +582,7 @@
     }
 
     footer p {
-        font-size: 0.82rem;
+        font-size: 0.8rem;
         line-height: 1.5;
         margin-top: 0.3rem;
     }
@@ -523,11 +605,11 @@
     }
 
     .hero-text h1 {
-        font-size: 1.65rem;
+        font-size: 1.6rem;
     }
 
     .hero-text h2 {
-        font-size: 0.98rem;
+        font-size: 0.95rem;
     }
 
     .cta-buttons .btn {
@@ -544,19 +626,16 @@
 }
 
 /* ==========================================================
-   ULTRA COMPACT MOBILE SCREENS (<= 340px)
+   ULTRA COMPACT MOBILE SCREENS (<= 350px)
    ========================================================== */
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 350px) {
     .skill-grid,
     .achievement-grid {
         grid-template-columns: 1fr;
+        gap: 0.75rem;
     }
 
-    .cta-buttons {
-        grid-template-columns: 1fr;
-    }
-
-    .cta-buttons .btn:first-child {
-        grid-column: span 1;
+    .cta-buttons .btn {
+        flex: 1 1 100%;
     }
 }
