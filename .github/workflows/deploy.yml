@@ -1,0 +1,23 @@
+name: Deploy Reina Portfolio to Production
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Run Deploy Script on VPS
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger Deployment via SSH
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          script: |
+            sudo bash /home/ubuntu/deploy_reina.sh
